@@ -1,6 +1,6 @@
 {
-  "name": "scania-plugin",
-  "version": "0.0.0",
+  "name": "scania-banner-plugin",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,10 +15,15 @@
     "@angular/common": "~9.1.11",
     "@angular/compiler": "~9.1.11",
     "@angular/core": "~9.1.11",
+    "@angular/elements": "^9.1.11",
     "@angular/forms": "~9.1.11",
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@webcomponents/custom-elements": "^1.4.1",
+    "aws-sdk": "^2.701.0",
+    "bulma": "^0.9.0",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -42,5 +47,22 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saadriazkhan/scania-banner-plugin.git"
+  },
+  "keywords": [
+    "angular9",
+    "scania",
+    "widget"
+  ],
+  "author": "Saad Riaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saadriazkhan/scania-banner-plugin/issues"
+  },
+  "homepage": "https://github.com/saadriazkhan/scania-banner-plugin#readme"
 }

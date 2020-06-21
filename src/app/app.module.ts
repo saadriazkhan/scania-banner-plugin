@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector, DoBootstrap } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		BannerComponent
+	],
+	imports: [
+		BrowserModule
+	],
+	providers: [],
+	entryComponents: [
+		BannerComponent
+	]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+	constructor(injector: Injector) {
+		const custom = createCustomElement(BannerComponent, { injector: injector });
+		customElements.define('scania-banner', custom);
+	}
+
+	public ngDoBootstrap(): void { }
+}

@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+/* overriding bulma variables here */
+
+$spacing-shortcuts: ("margin": "m");
+$spacing-values: ("tiny": 5px, "small": 10px, "normal": 15px, "medium": 20px, "large": 25px, "larger": 30px);
+
+/* helper classes */
+$borderRadiusKey: "br";
+$separator: "-";
+$sizes: (
+	("0", 0),
+	("1", 4),
+	("2", 8),
+	("3", 12),
+	("4", 16),
+	("5", 20),
+	("6", 24),
+	("7", 28),
+	("8", 32),
+	("9", 36),
+	("10", 40)
+);
+
+
+@function borderRadiusValue($key, $value) {
+	@return if($key == "0", 0, $value);
+}
+
+/* creates each class */
+
+@each $size in $sizes {
+	$sizeKey: nth($size, 1);
+    $sizeValue: nth($size, 2);
+
+    .#{$borderRadiusKey}#{$separator}#{$sizeKey} {
+		border-radius: borderRadiusValue($sizeKey, $sizeValue) !important;
+	}
+}
+
+$widths: (
+    ("quarter", 25%), 
+    ("half", 50%), 
+    ("three-quarter", 75%), 
+    ("full", 100%)
+);
+
+@each $width in $widths {
+    $widthKey: nth($width, 1);
+    $widthValue: nth($width, 2);
+
+    .width#{$separator}#{$widthKey} {
+        width: #{$widthValue};
+    }
+}
+
+.is-underlined {
+	text-decoration: underline;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.position-absolute {
+	position: absolute;
+}
