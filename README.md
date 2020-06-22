@@ -20,7 +20,8 @@ The file name generated from production build will be `scania-banner-plugin.js`.
 
 ## To insert the widget  
 
-- Insert the tag `<scania-banner id="scania-banner" src="linktorepo/scania-banner-plugin.js"></scania-banner>` at the place where you want the widget to be used.
+- Insert the tag `<scania-banner id="scania-banner"></scania-banner>` at the place where you want the widget to be used.
+- On the next line add `<script src="linktorepo/scania-banner-plugin.js"></script>`.
 - In the `js` file, get the web component element by `document.getElementById('scania-banner')` and give the configurations to set the `bannerconfiguration` attribute of this element by `setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration))`. 
 - Configurations map of `webElementConfiguration` is as follows
 
