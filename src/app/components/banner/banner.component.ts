@@ -1,12 +1,13 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation } from '@angular/core';
 import { IBanner } from '../../../interfaces/i-banner.interface';
 import { IBannerType, BannerTypes } from 'src/interfaces/i-banner-type.interface';
 
 @Component({
 	templateUrl: './banner.component.html',
-	styleUrls: ['./banner.component.scss']
+	styleUrls: ['./banner.component.scss'],
+	encapsulation: ViewEncapsulation.ShadowDom
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent implements OnChanges {
 
 	@Input()
 	public bannerconfiguration: string;
@@ -19,10 +20,11 @@ export class BannerComponent implements OnInit {
 
 	public constructor() { }
 
-	public ngOnInit(): void {;
-		
+	public ngOnChanges(): void {
 		this.banner = JSON.parse(this.bannerconfiguration);
 		this.bannerType = BannerTypes[this.banner.type];
+
+		console.log(this.banner);
 	}
 
 	public isBannerHidden(): boolean {

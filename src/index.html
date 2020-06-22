@@ -15,11 +15,9 @@
 </body>
 
 <script>
-	let customWebElement = document.getElementById('scania-banner');
-
 	let webElementConfiguration = {
-		type: 'action',
-		isEnabled: true,
+		type: 'greeting',
+		isEnabled: 'true',
 		label: 'this is the label',
 		content: 'here comes the content',
 		imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/fruits.png',
@@ -37,9 +35,10 @@
 			clientSecret: '',
 		},
 		translateToLanguage: 'fr'
-	}
-
-	customWebElement.setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
+    }
+    
+    
+	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
 
 </script>
 
