@@ -6,19 +6,19 @@ export interface IBannerType {
 
 export const BannerTypes: Record<string, IBannerType> = {
     greeting: {
-        background: 'primary',
+        background: 'success',
         icon: 'fa-tasks',
     },
     warning: {
-        background: '',
-        icon: '',
+        background: 'warning',
+        icon: 'fa-home',
     },
     action: {
-        background: '',
-        icon: '',
+        background: 'info',
+        icon: 'fa-home',
     },
     danger: {
-        background: '',
-        icon: '',
+        background: 'danger',
+        icon: 'fa-times',
     }
 }
