@@ -1,4 +1,4 @@
-<div *ngIf="enabled" class="container" [ngClass]="{'is-hidden': isBannerHidden()}">
+<div *ngIf="banner.isEnabled" class="container" [ngClass]="{'is-hidden': isBannerHidden()}">
 	<div class="card" [ngClass]="'has-background-' + bannerType.background">
 		<div class="is-flex p-3">
 			<div class="card-header-title">
@@ -7,40 +7,40 @@
 				</span>
 
 				<label class="mr-3 is-uppercase is-underlined">
-					{{label}}
+					{{banner.label}}
 				</label>
 
-				<div *ngIf="imageUrl" class="mr-3">
+				<div *ngIf="banner.imageUrl" class="mr-3">
 					<figure class="image is-128x128 is-1by1">
-						<img [src]="imageUrl">
+						<img [src]="banner.imageUrl">
 					</figure>
 				</div>
 
-				<div *ngIf="videoUrl" class="mr-3">
+				<div *ngIf="banner.videoUrl" class="mr-3">
 					<video controls width="250">
-						<source [src]="videoUrl" type="video/mp4">
+						<source [src]="banner.videoUrl" type="video/mp4">
 
 						Sorry, your browser doesn't support embedded videos.
 					</video>
 				</div>
 
-				<span *ngIf="content" class="mr-3">
-					{{content}}
+				<span *ngIf="banner.content" class="mr-3">
+					{{banner.content}}
 				</span>
 
-				<span class="is-underlined">
-					<div *ngIf="actionUrl; else simpleAction">
-						<a [href]="actionUrl" (click)="onActionButtonClick()">
-							{{action}}
+				<span>
+					<div *ngIf="banner.action.url; else simpleAction" class="is-underlined">
+						<a [href]="banner.action.url" (click)="onActionButtonClick()">
+							{{banner.action.text}}
 						</a>
 					</div>
 					<ng-template #simpleAction>
-						{{action}}
+						{{banner.action.text}}
 					</ng-template>
 				</span>
 
 			</div>
-			<span class="my-3 is-pulled-right icon medium">
+			<span class="my-3 is-pulled-right icon medium pointer" (click)="onCrossButtonClick()">
 				<i class="fa fa-times"></i>
 			</span>
 		</div>

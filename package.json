@@ -49,7 +49,7 @@
 		"typescript": "~3.8.3"
 	},
 	"description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.",
-	"main": "karma.conf.js",
+	"main": "index.html",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/saadriazkhan/scania-banner-plugin.git"

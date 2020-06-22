@@ -1,14 +1,15 @@
 export interface IBanner {
+    isEnabled: boolean;
     type: string;
-    enabled: boolean;
     label: string;
     content: string;
-    imageUrl?: String;
-    videoUrl?: String;
-    action: String;
-    actionUrl?: String;
-    startTime?: String;
-    endTime?: String;
-    translateToLanguage?: String;
-    isBannerHidden(): boolean;
+    imageUrl?: string;
+    videoUrl?: string;
+    action: {
+        text:string;
+        url?:string;
+    };
+    startDateTime?: string;
+    endDateTime?: string;
+    translateToLanguage?: string;
 }
