@@ -21,10 +21,13 @@ export class BannerComponent implements OnChanges {
 	public constructor() { }
 
 	public ngOnChanges(): void {
-		this.banner = JSON.parse(this.bannerconfiguration);
-		this.bannerType = BannerTypes[this.banner.type];
-
-		console.log(this.banner);
+		try {
+			this.banner = JSON.parse(this.bannerconfiguration);
+			this.bannerType = BannerTypes[this.banner.type];
+		}
+		catch (e) {
+			this.banner = undefined;
+		}
 	}
 
 	public isBannerHidden(): boolean {

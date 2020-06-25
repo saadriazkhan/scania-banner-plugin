@@ -17,9 +17,13 @@ import { createCustomElement } from '@angular/elements';
 	]
 })
 export class AppModule implements DoBootstrap {
+
 	constructor(injector: Injector) {
-		const custom = createCustomElement(BannerComponent, { injector: injector });
-		customElements.define('scania-banner', custom);
+		const customElement = createCustomElement(BannerComponent, {
+			injector: injector
+		});
+
+		customElements.define('scania-banner', customElement);
 	}
 
 	public ngDoBootstrap(): void { }
