@@ -1,52 +1,137 @@
-<!-- importing bulma for now. but later will change it -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> 
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1' rel='stylesheet' type='text/css'> -->
 
-
-<div *ngIf="banner && banner.isEnabled" class="container" [ngClass]="{'is-hidden': isBannerHidden()}">
-	<div class="card" [ngClass]="'has-background-' + bannerType.background">
-		<div class="is-flex p-3">
-			<div class="card-header-title">
-				<span class="mr-3 icon medium">
-					<i class="fa fa-exclamation-triangle" [ngClass]="bannerType.icon"></i>
-				</span>
-
-				<label class="mr-3 is-uppercase is-underlined">
-					{{banner.label}}
-				</label>
-
-				<div *ngIf="banner.imageUrl" class="mr-3">
-					<figure class="image is-128x128 is-1by1">
-						<img [src]="banner.imageUrl">
-					</figure>
-				</div>
-
-				<div *ngIf="banner.videoUrl" class="mr-3">
-					<video controls width="250">
-						<source [src]="banner.videoUrl" type="video/mp4">
-
-						Sorry, your browser doesn't support embedded videos.
-					</video>
-				</div>
-
-				<span *ngIf="banner.content" class="mr-3">
-					{{banner.content}}
-				</span>
-
-				<span>
-					<div *ngIf="banner.action.url; else simpleAction" class="is-underlined">
-						<a [href]="banner.action.url" (click)="onActionButtonClick()">
-							{{banner.action.text}}
-						</a>
-					</div>
-					<ng-template #simpleAction>
-						{{banner.action.text}}
-					</ng-template>
-				</span>
-
+<div *ngIf="banner && banner.isEnabled && !isBannerHidden()" class="has-banner-shadow p-4"
+	[ngClass]="'has-banner-background-' + banner.type">
+	<div class="columns is-flex">
+		<div class="column is-flex">
+			<div class="mr-4 icon is-medium is-horizontal-aligned">
+				<ng-container *ngIf="banner.type == 'greeting'; then greeting"></ng-container>
+				<ng-container *ngIf="banner.type == 'information'; then information"></ng-container>
+				<ng-container *ngIf="banner.type == 'warning'; then warning"></ng-container>
+				<ng-container *ngIf="banner.type == 'danger'; then danger"></ng-container>
 			</div>
-			<span class="my-3 is-pulled-right icon medium pointer" (click)="onCrossButtonClick()">
-				<i class="fa fa-times"></i>
+
+			<div class="mr-4 is-uppercase is-underlined is-horizontal-aligned has-text-weight-bold"
+				[ngClass]="'has-color-' + banner.type">
+				{{banner.label}}
+			</div>
+
+			<div *ngIf="banner.content" class="mr-4 is-horizontal-aligned">
+				{{banner.content}}
+			</div>
+
+			<div *ngIf="banner.imageUrl" class="mr-4 image is-128x128 is-horizontal-aligned">
+				<img width="128" [src]="banner.imageUrl">
+			</div>
+
+			<div *ngIf="banner.videoUrl" class="mr-4 is-horizontal-aligned">
+				<video controls width="256">
+					<source [src]="banner.videoUrl" type="video/mp4">
+
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+			</div>
+
+			<span class="mr-4 is-horizontal-aligned has-text-weight-bold">
+				<div *ngIf="banner.action.url; else simpleAction" class="is-underlined">
+					<a [href]="banner.action.url" (click)="onActionButtonClick()"
+						[ngClass]="'has-color-' + banner.type">
+						{{banner.action.text}}
+					</a>
+				</div>
+				<ng-template #simpleAction>
+					<div [ngClass]="'has-color-' + banner.type">
+						{{banner.action.text}}
+					</div>
+				</ng-template>
 			</span>
+		</div>
+		<div class="column is-narrow is-horizontal-aligned">
+			<div class="icon is-medium pointer" (click)="onCloseButtonClick()">
+				<ng-container *ngIf="banner.type == 'greeting'; then closegreeting"></ng-container>
+				<ng-container *ngIf="banner.type == 'information'; then closeinformation"></ng-container>
+				<ng-container *ngIf="banner.type == 'warning'; then closewarning"></ng-container>
+				<ng-container *ngIf="banner.type == 'danger'; then closedanger"></ng-container>
+			</div>
 		</div>
 	</div>
 </div>
+
+<ng-template #closegreeting>
+	<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M14 2L2 14" stroke="#041E42" stroke-width="3" />
+		<path d="M2 2L14 14" stroke="#041E42" stroke-width="3" />
+	</svg>
+</ng-template>
+
+<ng-template #closeinformation>
+	<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M14 2L2 14" stroke="#44A878" stroke-width="3" />
+		<path d="M2 2L14 14" stroke="#44A878" stroke-width="3" />
+	</svg>
+</ng-template>
+
+<ng-template #closewarning>
+	<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M14 2L2 14" stroke="#E35205" stroke-width="3" />
+		<path d="M2 2L14 14" stroke="#E35205" stroke-width="3" />
+	</svg>
+</ng-template>
+
+<ng-template #closedanger>
+	<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M14 2L2 14" stroke="#D6001C" stroke-width="3" />
+		<path d="M2 2L14 14" stroke="#D6001C" stroke-width="3" />
+	</svg>
+</ng-template>
+
+
+
+
+<ng-template #greeting>
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="12" cy="12" r="12" fill="#041E42" />
+		<path d="M11.1299 9.28496H13.0499V17.25H11.1299V9.28496ZM11.1299 6.20996H13.0499V7.94996H11.1299V6.20996Z"
+			fill="#FAFAFA" />
+	</svg>
+</ng-template>
+
+<ng-template #information>
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="12" cy="12" r="12" fill="#44A878" />
+		<path d="M11.1299 9.28496H13.0499V17.25H11.1299V9.28496ZM11.1299 6.20996H13.0499V7.94996H11.1299V6.20996Z"
+			fill="#FAFAFA" />
+	</svg>
+</ng-template>
+
+<ng-template #warning>
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0)">
+			<path
+				d="M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z"
+				fill="#E35205" />
+			<path d="M11.25 11.325H13.17V19.29H11.25V11.325ZM11.25 8.25H13.17V9.99H11.25V8.25Z" fill="#FAFAFA" />
+		</g>
+		<defs>
+			<clipPath id="clip0">
+				<rect width="24" height="24" fill="white" />
+			</clipPath>
+		</defs>
+	</svg>
+</ng-template>
+
+<ng-template #danger>
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0)">
+			<path
+				d="M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z"
+				fill="#D6001C" />
+			<path d="M11.25 11.325H13.17V19.29H11.25V11.325ZM11.25 8.25H13.17V9.99H11.25V8.25Z" fill="#FAFAFA" />
+		</g>
+		<defs>
+			<clipPath id="clip0">
+				<rect width="24" height="24" fill="white" />
+			</clipPath>
+		</defs>
+	</svg>
+</ng-template>

@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation } from '@angular/core';
 import { IBanner } from '../../../interfaces/i-banner.interface';
-import { IBannerType, BannerTypes } from 'src/interfaces/i-banner-type.interface';
 
 @Component({
 	templateUrl: './banner.component.html',
@@ -16,14 +15,18 @@ export class BannerComponent implements OnChanges {
 	public actionclickevent = new EventEmitter<string>();
 
 	public banner: IBanner;
-	public bannerType: IBannerType;
+	public iconType: Record<string, string> = {
+		'greeting': 'information-greeting',
+		'information': 'information-info',
+		'warning': 'warning-warning',
+		'danger': 'warning-danger'
+	};
 
 	public constructor() { }
 
 	public ngOnChanges(): void {
 		try {
 			this.banner = JSON.parse(this.bannerconfiguration);
-			this.bannerType = BannerTypes[this.banner.type];
 		}
 		catch (e) {
 			this.banner = undefined;
@@ -35,21 +38,21 @@ export class BannerComponent implements OnChanges {
 			return false;
 
 		let currentTime: Date = new Date();
-		if (currentTime.getTime() < new Date(this.banner.startDateTime).getTime())
+		
+		if (currentTime.getTime() < new Date(parseInt(this.banner.startDateTime)).getTime())
 			return true;
 
-		if (currentTime.getTime() > new Date(this.banner.endDateTime).getTime())
+		if (currentTime.getTime() > new Date(parseInt(this.banner.endDateTime)).getTime())
 			return true;
 
 		return false;
 	}
 
-	public onCrossButtonClick() {
+	public onCloseButtonClick() {
 		this.banner.isEnabled = false;
 	}
 
 	public onActionButtonClick(): void {
 		this.actionclickevent.emit();
 	}
-
 }

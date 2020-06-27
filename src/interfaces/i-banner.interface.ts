@@ -1,6 +1,6 @@
 export interface IBanner {
     isEnabled: boolean;
-    type: string;
+    type: 'greeting' | 'information' | 'warning' | 'danger';
     label: string;
     content: string;
     imageUrl?: string;
@@ -11,5 +11,4 @@ export interface IBanner {
     };
     startDateTime?: string;
     endDateTime?: string;
-    translateToLanguage?: string;
 }

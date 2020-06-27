@@ -27,7 +27,7 @@ The file name generated from production build will be `scania-banner-plugin.js`.
 
 ```
 webElementConfiguration  = {
-	type: 'action', // can be 'greeting', 'action', 'warning', 'danger'
+	type: 'action', // can only be 'greeting', 'action', 'warning', 'danger'
 	isEnabled: true,
 	label: '<some label>',
 	content: '<some content>', // optional
@@ -37,8 +37,8 @@ webElementConfiguration  = {
 		text: '<some-action-button-text>',
 		url: '<url-if needed>' // optional
 	},
-	startDateTime: '<startDateTimeStamp>', // optional
-	endDateTime: '<endDateTimeStamp>', // optional
+	startDateTime: '<startDateTimeStamp>', // optional epoch datetime stamp
+	endDateTime: '<endDateTimeStamp>', // optional epoch datetime stamp
 	credentials: { // optional aws credentials to translate the text to another language 
 		clientId: '',
 		clientSecret: '',
@@ -46,3 +46,6 @@ webElementConfiguration  = {
 	translateToLanguage: '<language>' // optional
 }
 ```
+
+
+If the current time is between the start time and the end time, only then the banner would be visible. 

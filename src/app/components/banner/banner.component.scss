@@ -1,71 +1,237 @@
-/* overriding bulma variables here */
+
+@function sizeValue($key, $value) {
+    @return if($key == "0", 0, $value + rem);
+}
 
 :host {
+    @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1');
+    position: relative;
+    color: #2d2926;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
 
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    $banner-colors: (
+        ("greeting", #041e42),
+        ("information", #44a878),
+        ("warning", #e35205),
+        ("danger", #d6001c),
+    );
 
+    @each $banner-color in $banner-colors {
+        $key: nth($banner-color, 1);
+        $value: nth($banner-color, 2);
 
-    $spacing-shortcuts: ("margin": "m");
-    $spacing-values: ("tiny": 5px, "small": 10px, "normal": 15px, "medium": 20px, "large": 25px, "larger": 30px);
-    
-    /* helper classes */
-    $borderRadiusKey: "br";
+        .has-color-#{$key} {
+            color: #{$value};
+        }
+    }
+
+    $banner-background-colors: (
+        ("greeting", #d9e1eb),
+        ("information", #d3e8d6),
+        ("warning", #f7e6dd),
+        ("danger", #f5e6e8),
+    );
+
+    @each $banner-background-color in $banner-background-colors {
+        $key: nth($banner-background-color, 1);
+        $value: nth($banner-background-color, 2);
+
+        .has-banner-background-#{$key} {
+            background-color: #{$value};
+        }
+    }
+
+    $marginKey: "m";
+    $paddingKey: "p";
     $separator: "-";
     $sizes: (
         ("0", 0),
-        ("1", 4),
-        ("2", 8),
-        ("3", 12),
-        ("4", 16),
-        ("5", 20),
-        ("6", 24),
-        ("7", 28),
-        ("8", 32),
-        ("9", 36),
-        ("10", 40)
+        ("1", 0.25),
+        ("2", 0.5),
+        ("3", 0.75),
+        ("4", 1),
+        ("5", 1.25),
+        ("6", 1.5),
+        ("7", 1.75),
+        ("8", 2),
+    );
+
+    $positions: (
+        ("t", "top"),
+        ("r", "right"),
+        ("b", "bottom"),
+        ("l", "left")
     );
     
-    
-    @function borderRadiusValue($key, $value) {
-        @return if($key == "0", 0, $value);
-    }
-    
+    $superPositions: (
+        ("x", "horizontal"),
+        ("y", "vertical")
+    );
+
     /* creates each class */
-    
     @each $size in $sizes {
         $sizeKey: nth($size, 1);
         $sizeValue: nth($size, 2);
-    
-        .#{$borderRadiusKey}#{$separator}#{$sizeKey} {
-            border-radius: borderRadiusValue($sizeKey, $sizeValue) !important;
+        
+        .#{$marginKey}#{$separator}#{$sizeKey} {
+            margin: sizeValue($sizeKey, $sizeValue);
+        }
+        .#{$paddingKey}#{$separator}#{$sizeKey} {
+            padding: sizeValue($sizeKey, $sizeValue);
+        }
+
+        @each $position in $positions {
+            $posKey: nth($position, 1);
+            $posValue: nth($position, 2);
+            .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
+                margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+            }
+            .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
+                padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+            }
+        }
+
+        @each $superPosition in $superPositions {
+            $posKey: nth($superPosition, 1);
+            
+            @if ($posKey == "x") {
+                .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
+                    margin-left: sizeValue($sizeKey, $sizeValue);
+                    margin-right: sizeValue($sizeKey, $sizeValue);
+                }
+                .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
+                    padding-left: sizeValue($sizeKey, $sizeValue);
+                    padding-right: sizeValue($sizeKey, $sizeValue);
+                }
+            }
+            
+            @if ($posKey == "y") {
+                .#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
+                    margin-top: sizeValue($sizeKey, $sizeValue);
+                    margin-bottom: sizeValue($sizeKey, $sizeValue);
+                }
+
+                .#{$paddingKey}#{$posKey}#{$separator}#{$sizeKey} {
+                    padding-top: sizeValue($sizeKey, $sizeValue);
+                    padding-bottom: sizeValue($sizeKey, $sizeValue);
+                }
+            }
         }
     }
-    
+
     $widths: (
         ("quarter", 25%), 
         ("half", 50%), 
         ("three-quarter", 75%), 
         ("full", 100%)
     );
-    
+
     @each $width in $widths {
         $widthKey: nth($width, 1);
         $widthValue: nth($width, 2);
-    
+
         .width#{$separator}#{$widthKey} {
             width: #{$widthValue};
         }
     }
-    
-    .is-underlined {
-        text-decoration: underline;
+
+    .image {
+        display: block;
+        position: relative;
     }
     
-    .pointer {
-        cursor: pointer;
+    .image img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    $imageSizes: 32, 48, 64, 96, 128, 256;
+
+    @each $imageSize in $imageSizes {
+        .image.is-#{$imageSize}x#{$imageSize} {
+            height: #{$imageSize}px !important;
+            width: #{$imageSize}px !important;
+        }
+    }
+
+    .column {
+        display: block;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .column.is-narrow {
+        flex: none;
+    }
+
+    .has-banner-shadow {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    }
+
+    .has-text-weight-bold {
+        font-weight: bold;
+    }
+    
+    .position-relative {
+        position: relative;
     }
     
     .position-absolute {
         position: absolute;
+    }
+    
+    .is-flex {
+        display: flex;
+    }
+
+    .is-underlined {
+        text-decoration: underline;
+    }
+
+    .is-uppercase {
+        text-transform: uppercase;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    .icon {
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+    .icon.is-small {
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    .icon.is-medium {
+        height: 2rem;
+        width: 2rem;
+    }
+    
+    .icon.is-large {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .is-pulled-left {
+        float: left;
+    }
+
+    .is-pulled-right {
+        float: right;
+    }
+
+    .is-horizontal-aligned {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
