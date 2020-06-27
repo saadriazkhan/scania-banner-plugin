@@ -39,11 +39,6 @@ webElementConfiguration  = {
 	},
 	startDateTime: '<startDateTimeStamp>', // optional epoch datetime stamp
 	endDateTime: '<endDateTimeStamp>', // optional epoch datetime stamp
-	credentials: { // optional aws credentials to translate the text to another language 
-		clientId: '',
-		clientSecret: '',
-	},
-	translateToLanguage: '<language>' // optional
 }
 ```
 
