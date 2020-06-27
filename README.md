@@ -49,3 +49,11 @@ webElementConfiguration  = {
 
 
 If the current time is between the start time and the end time, only then the banner would be visible. 
+
+The banner can be of four types
+- `greeting`
+- `information`
+- `warning`
+- `danger`
+
+Based on `type` inside configuration, the banner would reflect automatically with approriate colors and icons. 
