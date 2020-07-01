@@ -42,30 +42,30 @@
 		// endDateTime: '1593527022000'
 	};
 	const configuration = {
-		type: 'warning', // can only be 'greeting', 'action', 'warning', 'danger'
-		isEnabled: true,
-		label: 'Unable to load vehicle list',
-		content: 'Due to heavy traffic dashobord crashed', // optional
-		imageUrls: [
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360',
-			'https://placekitten.com/640/360'
-		], // optional
-		maxImagesToShow: 5,
-		videoUrls: [] // '<:'<some-array-of-url>', // optional
-		// maxVideosToShow: '<number-of-video-icons-to-show-in-banner>' // optional
-		// action: {
-		//  text: '<some-action-button-text>',
-		//  url: '<url-if needed>' // optional
-		// },
-		// startDateTime: '<startDateTimeStamp>', // optional epoch datetime stamp
-		// endDateTime: '<endDateTimeStamp>', // optional epoch datetime stamp
-	}
+        type: "warning", // can only be 'greeting', 'action', 'warning', 'danger'
+        isEnabled: true,
+        label: "Unable to load vehicle list",
+        content: "Due to heavy traffic dashobord crashed", // optional
+        imageUrls: [
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360",
+          "https://placekitten.com/640/360"
+        ], // optional
+        maxImagesToShow: 5
+        // videoUrls: '<:'<some-array-of-url>', // optional
+        // maxVideosToShow: '<number-of-video-icons-to-show-in-banner>' // optional
+        // action: {
+        // 	text: '<some-action-button-text>',
+        // 	url: '<url-if needed>' // optional
+        // },
+        // startDateTime: '<startDateTimeStamp>', // optional epoch datetime stamp
+        // endDateTime: '<endDateTimeStamp>', // optional epoch datetime stamp
+      }
 
 
 	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(configuration));

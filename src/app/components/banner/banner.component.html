@@ -40,10 +40,9 @@
 				</video-thumbnails>
 			</ng-container>
 
-			<total-count *ngIf="(banner.imageUrls.length - banner.maxImagesToShow) + (banner.videoUrls.length - banner.maxVideosToShow) > 0"
-				class="ml-4 mt-auto mb-1 pointer">
+			<total-count class="ml-4 mt-auto mb-1 pointer">
 				<div class="br-10 p-1 additional-count" (click)="openModal()">
-					+{{ (banner.imageUrls.length - banner.maxImagesToShow) + (banner.videoUrls.length - banner.maxVideosToShow) }}
+					+{{ displayCount }}
 				</div>
 			</total-count>
 

@@ -23,16 +23,29 @@ export class BannerComponent implements OnChanges {
 	};
 	public modalOpened: boolean = false;
 	public itemSource: string;
+	public displayCount: number = 0;
 
 	public constructor() { }
 
 	public ngOnChanges(): void {
 		try {
 			this.banner = JSON.parse(this.bannerconfiguration);
+			this.calculateAdditionalCount();
 		}
 		catch (e) {
 			this.banner = undefined;
 		}
+	}
+
+	private calculateAdditionalCount(): void {
+		if (this.banner.imageUrls)
+			this.displayCount = this.banner.imageUrls.length;
+		if (this.banner.videoUrls)
+			this.displayCount += this.banner.videoUrls.length;
+		if (this.banner.maxImagesToShow)
+			this.displayCount -= this.banner.maxImagesToShow;
+		if (this.banner.maxVideosToShow)
+			this.displayCount -= this.banner.maxVideosToShow;
 	}
 
 	public isBannerHidden(): boolean {
