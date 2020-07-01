@@ -114277,16 +114277,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         },
         decls: 22,
         vars: 11,
-        consts: [[1, "position-fixed", "modal-overlay", "width-full", "height-full"], [1, "pointer", "mt-4", "text-right", "mr-4", 3, "click"], [4, "ngTemplateOutlet"], [1, "mt-5", "position-fixed", "modal-body", "width-full", "height-full", "align-center-screen"], [1, "position-fixed", "background-black", "br-2"], [1, "columns"], [1, "columns", "is-flex", "m-4"], [1, "column", "is-narrow", "is-horizontal-aligned", 3, "click"], [1, "is-rounded", "py-3", "px-4", "background-grey", "pointer", "align-center-screen", 3, "ngClass"], [1, "column", "width-full", "height-full"], ["class", "m-4", 4, "ngIf"], ["close", ""], ["left", ""], ["right", ""], [1, "m-4"], ["controls", "", 1, "content-maximum", 3, "src"], [1, "content-maximum", 3, "src"], ["width", "25", "height", "25", "viewBox", "0 0 16 16", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M14 2L2 14", "stroke", "#fff", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#fff", "stroke-width", "3"], ["width", "16", "height", "18", "viewBox", "0 0 16 18", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M4 1L12 9L4 17", "stroke", "#53565A", "stroke-width", "2", 2, "transform", "rotate(180deg)", "transform-origin", "50% 50%"], ["d", "M4 1L12 9L4 17", "stroke", "#53565A", "stroke-width", "2"]],
+        consts: [[1, "position-fixed", "modal-overlay", "width-full", "height-full", 3, "click"], [1, "pointer", "mt-4", "is-pulled-right", "mr-4"], [4, "ngTemplateOutlet"], [1, "mt-5", "position-fixed", "modal-body", "width-full", "height-full", "align-center-screen", 3, "click"], [1, "position-fixed", "background-black", "br-2", 3, "click"], [1, "columns"], [1, "columns", "is-flex", "m-4"], [1, "column", "is-narrow", "is-horizontal-aligned", 3, "click"], [1, "is-rounded", "py-3", "px-4", "background-grey", "pointer", "align-center-screen", 3, "ngClass"], [1, "column", "width-full", "height-full"], ["class", "m-4", 4, "ngIf"], ["close", ""], ["left", ""], ["right", ""], [1, "m-4"], ["controls", "", 1, "content-maximum", 3, "src"], [1, "content-maximum", 3, "src"], ["width", "25", "height", "25", "viewBox", "0 0 16 16", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M14 2L2 14", "stroke", "#fff", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#fff", "stroke-width", "3"], ["width", "16", "height", "18", "viewBox", "0 0 16 18", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M4 1L12 9L4 17", "stroke", "#53565A", "stroke-width", "2", 2, "transform", "rotate(180deg)", "transform-origin", "50% 50%"], ["d", "M4 1L12 9L4 17", "stroke", "#53565A", "stroke-width", "2"]],
         template: function ModalComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ModalComponent_Template_div_click_1_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ModalComponent_Template_div_click_0_listener() {
               return ctx.closeModal();
             });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, ModalComponent_div_2_Template, 1, 0, "div", 2);
 
@@ -114296,7 +114296,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
 
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ModalComponent_Template_div_click_3_listener() {
+              return ctx.closeModal();
+            });
+
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ModalComponent_Template_div_click_4_listener($event) {
+              return $event.stopPropagation();
+            });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
 

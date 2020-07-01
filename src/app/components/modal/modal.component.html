@@ -1,10 +1,10 @@
-<div class="position-fixed modal-overlay width-full height-full">
-    <div class="pointer mt-4 text-right mr-4" (click)="closeModal()">
+<div class="position-fixed modal-overlay width-full height-full" (click)="closeModal()">
+    <div class="pointer mt-4 is-pulled-right mr-4">
         <div *ngTemplateOutlet="close"></div>
     </div>
 </div>
-<div class="mt-5 position-fixed modal-body width-full height-full align-center-screen">
-    <div class="position-fixed background-black br-2">
+<div class="mt-5 position-fixed modal-body width-full height-full align-center-screen" (click)="closeModal()">
+    <div class="position-fixed background-black br-2" (click)="$event.stopPropagation()">
         <div class="columns">
             <div class="columns is-flex m-4">
                 <left class="column is-narrow is-horizontal-aligned" (click)="previous()">
