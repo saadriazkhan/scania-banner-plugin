@@ -71,54 +71,6 @@
 							"browserTarget": "scania-plugin:build:production"
 						}
 					}
-				},
-				"extract-i18n": {
-					"builder": "@angular-builders/custom-webpack:extract-i18n",
-					"options": {
-						"browserTarget": "scania-plugin:build"
-					}
-				},
-				"test": {
-					"builder": "@angular-builders/custom-webpack:karma",
-					"options": {
-						"main": "src/test.ts",
-						"polyfills": "src/polyfills.ts",
-						"tsConfig": "tsconfig.spec.json",
-						"karmaConfig": "karma.conf.js",
-						"assets": [
-							"src/favicon.ico",
-							"src/assets"
-						],
-						"styles": [
-							"src/styles.scss"
-						],
-						"scripts": []
-					}
-				},
-				"lint": {
-					"builder": "@angular-builders/custom-webpack:tslint",
-					"options": {
-						"tsConfig": [
-							"tsconfig.app.json",
-							"tsconfig.spec.json",
-							"e2e/tsconfig.json"
-						],
-						"exclude": [
-							"**/node_modules/**"
-						]
-					}
-				},
-				"e2e": {
-					"builder": "@angular-builders/custom-webpack:protractor",
-					"options": {
-						"protractorConfig": "e2e/protractor.conf.js",
-						"devServerTarget": "scania-plugin:serve"
-					},
-					"configurations": {
-						"production": {
-							"devServerTarget": "scania-plugin:serve:production"
-						}
-					}
 				}
 			}
 		}
