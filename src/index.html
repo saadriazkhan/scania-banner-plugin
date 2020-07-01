@@ -16,21 +16,23 @@
 
 <script>
 	let webElementConfiguration = {
-		type: 'greeting',
+		type: 'information',
 		isEnabled: 'true',
 		label: 'this is the label',
 		content: 'here comes the content',
-		imageUrl: 'https://homepages.cae.wisc.edu/~ece533/images/fruits.png',
-		videoUrl: 'https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4',
+		imageUrls: ['https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg', 'https://image.shutterstock.com/z/stock-photo-large-beautiful-drops-of-transparent-rain-water-on-a-green-leaf-macro-drops-of-dew-in-the-morning-668593321.jpg', 'https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-600w-766886038.jpg'],
+		maxImagesToShow: 2,
+		videoUrls: ['https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4', 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', 'https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4'],
+		maxVideosToShow: 2,
 		action: {
-			text: 'SomeAction',
+			text: 'Actiontext',
 			url: 'https://google.com'
 		},
-		startDateTime: '1593008622000',
-		endDateTime: '1593527022000'
-    }
-    
-    
+		// startDateTime: '1593008622000',
+		// endDateTime: '1593527022000'
+	}
+
+
 	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
 
 </script>

@@ -31,8 +31,10 @@ webElementConfiguration  = {
 	isEnabled: true,
 	label: '<some label>',
 	content: '<some content>', // optional
-	imageUrl:'<some-image-url>', // optional
-	videoUrl: '<some-video-url>', // optional
+	imageUrls:'<some-array-of-image-urls>', // optional
+	maxImagesToShow: '<number-of-image-icons-to-show-in-banner>' // optional
+	videoUrls: '<:'<some-array-of-url>', // optional
+	maxVideosToShow: '<number-of-video-icons-to-show-in-banner>' // optional
 	action: {
 		text: '<some-action-button-text>',
 		url: '<url-if needed>' // optional

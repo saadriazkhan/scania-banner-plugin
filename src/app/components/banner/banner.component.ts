@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { IBanner } from '../../../interfaces/i-banner.interface';
 
 @Component({
@@ -21,6 +21,8 @@ export class BannerComponent implements OnChanges {
 		'warning': 'warning-warning',
 		'danger': 'warning-danger'
 	};
+	public modalOpened: boolean = false;
+	public itemSource: string;
 
 	public constructor() { }
 
@@ -38,7 +40,7 @@ export class BannerComponent implements OnChanges {
 			return false;
 
 		let currentTime: Date = new Date();
-		
+
 		if (currentTime.getTime() < new Date(parseInt(this.banner.startDateTime)).getTime())
 			return true;
 
@@ -48,11 +50,24 @@ export class BannerComponent implements OnChanges {
 		return false;
 	}
 
-	public onCloseButtonClick() {
+	public onCloseButtonClick(): void {
 		this.banner.isEnabled = false;
 	}
 
 	public onActionButtonClick(): void {
 		this.actionclickevent.emit();
+	}
+
+	public openModal(itemSource?: string): void {
+		if (itemSource)
+			this.itemSource = itemSource;
+		else
+			this.itemSource = undefined;
+
+		this.modalOpened = true;
+	}
+
+	public closeModal(): void {
+		this.modalOpened = false;
 	}
 }

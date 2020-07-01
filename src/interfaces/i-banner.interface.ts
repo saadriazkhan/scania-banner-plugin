@@ -3,11 +3,13 @@ export interface IBanner {
     type: 'greeting' | 'information' | 'warning' | 'danger';
     label: string;
     content: string;
-    imageUrl?: string;
-    videoUrl?: string;
+    imageUrls?: string[];
+    maxImagesToShow?: number;
+    videoUrls?: string[];
+    maxVideosToShow?: number;
     action: {
-        text:string;
-        url?:string;
+        text: string;
+        url?: string;
     };
     startDateTime?: string;
     endDateTime?: string;

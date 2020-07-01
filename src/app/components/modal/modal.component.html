@@ -1,0 +1,51 @@
+<div class="position-fixed modal-overlay width-full height-full">
+    <div class="pointer mt-4 text-right mr-4" (click)="closeModal()">
+        <div *ngTemplateOutlet="close"></div>
+    </div>
+</div>
+<div class="mt-5 position-fixed modal-body width-full height-full">
+    <div class="position-fixed background-black br-2">
+        <div class="columns">
+            <div class="columns is-flex m-4">
+                <left class="column is-narrow is-horizontal-aligned" (click)="previous()">
+                    <div class="is-rounded py-2 px-3 background-grey pointer" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === 0)}">
+                        <icon *ngTemplateOutlet="left"></icon>
+                    </div>
+                </left>
+                <content class="column width-full height-full">
+                    <div *ngIf="displayList[displayItemIndex].type === 'video'" class="m-4">
+                        <video class="content-maximum" [src]="displayList[displayItemIndex].src" controls></video>
+                    </div>
+                    <div *ngIf="displayList[displayItemIndex].type === 'image'" class="m-4">
+                        <img class="content-maximum" [src]="displayList[displayItemIndex].src">
+                    </div>
+                </content>
+                <right class="column is-narrow is-horizontal-aligned" (click)="next()">
+                    <div class="is-rounded py-2 px-3 background-grey pointer" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === displayList.length -1)}" >
+                        <icon *ngTemplateOutlet="right"></icon>
+                    </div>
+                </right>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #close>
+    <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2L2 14" stroke="#fff" stroke-width="3" />
+        <path d="M2 2L14 14" stroke="#fff" stroke-width="3" />
+    </svg>
+</ng-template>
+
+<ng-template #left>
+    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 1L12 9L4 17" stroke="#53565A" stroke-width="2" style="transform: rotate(180deg); transform-origin: 50% 50%;" />
+    </svg>
+</ng-template>
+
+<ng-template #right>
+    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 1L12 9L4 17" stroke="#53565A" stroke-width="2" />
+    </svg>
+</ng-template>

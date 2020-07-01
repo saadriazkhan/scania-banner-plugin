@@ -1,15 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Injector, DoBootstrap } from '@angular/core';
+import { NgModule, Injector, DoBootstrap, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { BannerComponent } from './components/banner/banner.component';
 import { createCustomElement } from '@angular/elements';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
 	declarations: [
-		BannerComponent
+		BannerComponent,
+		ModalComponent
 	],
 	imports: [
 		BrowserModule
+	],
+	schemas: [
+		NO_ERRORS_SCHEMA
 	],
 	providers: [],
 	entryComponents: [

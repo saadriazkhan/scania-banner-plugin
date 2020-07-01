@@ -4,35 +4,50 @@
 	[ngClass]="'has-banner-background-' + banner.type">
 	<div class="columns is-flex">
 		<div class="column is-flex">
-			<div class="mr-4 icon is-medium is-horizontal-aligned">
+			<div class="icon is-medium is-horizontal-aligned">
 				<ng-container *ngIf="banner.type == 'greeting'; then greeting"></ng-container>
 				<ng-container *ngIf="banner.type == 'information'; then information"></ng-container>
 				<ng-container *ngIf="banner.type == 'warning'; then warning"></ng-container>
 				<ng-container *ngIf="banner.type == 'danger'; then danger"></ng-container>
 			</div>
 
-			<div class="mr-4 is-uppercase is-underlined is-horizontal-aligned has-text-weight-bold"
+			<label class="ml-4 is-uppercase is-underlined is-horizontal-aligned has-text-weight-bold"
 				[ngClass]="'has-color-' + banner.type">
 				{{banner.label}}
-			</div>
+			</label>
 
-			<div *ngIf="banner.content" class="mr-4 is-horizontal-aligned">
+			<banner-content *ngIf="banner.content" class="ml-4 is-horizontal-aligned">
 				{{banner.content}}
-			</div>
+			</banner-content>
 
-			<div *ngIf="banner.imageUrl" class="mr-4 image is-128x128 is-horizontal-aligned">
-				<img width="128" [src]="banner.imageUrl">
-			</div>
+			<images *ngFor="let imageUrl of banner.imageUrls; let index = index">
+				<div *ngIf="banner.maxImagesToShow && index < banner.maxImagesToShow" class="ml-4 image is-64x64"
+					(click)="openModal(imageUrl)">
+					<img class="image-border br-3 pointer" style="width: 64px; height: 64px;" width="64" height="64" [src]="imageUrl">
+				</div>
+			</images>
 
-			<div *ngIf="banner.videoUrl" class="mr-4 is-horizontal-aligned">
-				<video controls width="256">
-					<source [src]="banner.videoUrl" type="video/mp4">
+			<ng-container *ngFor="let videoUrl of banner.videoUrls; let index = index">
+				<video-thumbnails *ngIf="banner.maxVideosToShow && index < banner.maxVideosToShow"
+					class="ml-4 pointer" 
+					(click)="openModal(videoUrl)">
+					<div class="is-64x64 image-border br-3 background-black">
+						<div class="mt-2 ml-2">
+							<ng-template *ngTemplateOutlet="play">
+							</ng-template>
+						</div>
+					</div>
+				</video-thumbnails>
+			</ng-container>
 
-					Sorry, your browser doesn't support embedded videos.
-				</video>
-			</div>
+			<total-count *ngIf="(banner.imageUrls.length - banner.maxImagesToShow) + (banner.videoUrls.length - banner.maxVideosToShow) > 0"
+				class="ml-4 mt-auto mb-1 pointer">
+				<div class="br-10 p-1 additional-count" (click)="openModal()">
+					+{{ (banner.imageUrls.length - banner.maxImagesToShow) + (banner.videoUrls.length - banner.maxVideosToShow) }}
+				</div>
+			</total-count>
 
-			<span class="mr-4 is-horizontal-aligned has-text-weight-bold">
+			<action class="ml-8 is-horizontal-aligned has-text-weight-bold">
 				<div *ngIf="banner.action.url; else simpleAction" class="is-underlined">
 					<a [href]="banner.action.url" (click)="onActionButtonClick()"
 						[ngClass]="'has-color-' + banner.type">
@@ -44,8 +59,9 @@
 						{{banner.action.text}}
 					</div>
 				</ng-template>
-			</span>
+			</action>
 		</div>
+
 		<div class="column is-narrow is-horizontal-aligned">
 			<div class="icon is-medium pointer" (click)="onCloseButtonClick()">
 				<ng-container *ngIf="banner.type == 'greeting'; then closegreeting"></ng-container>
@@ -56,6 +72,15 @@
 		</div>
 	</div>
 </div>
+
+<ng-container *ngIf="modalOpened">
+	<scania-plugin-modal 
+		[imageUrls]="banner.imageUrls"
+		[videoUrls]="banner.videoUrls"
+		[displayItemSource]="itemSource"
+		(closeModalEventEmitter)="closeModal()"
+	></scania-plugin-modal>
+</ng-container>
 
 <ng-template #closegreeting>
 	<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,3 +160,13 @@
 		</defs>
 	</svg>
 </ng-template>
+
+<ng-template #play>
+	<svg width="48" height="48" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="9" cy="9" r="8" stroke="#fff" />
+		<path
+			d="M6.33334 13.0197V4.98054C6.33334 4.78992 6.53812 4.66943 6.70475 4.762L13.94 8.78157C14.1114 8.87682 14.1114 9.1234 13.94 9.21865L6.70475 13.2382C6.53812 13.3308 6.33334 13.2103 6.33334 13.0197Z"
+			stroke="#fff" />
+	</svg>
+</ng-template>
+
