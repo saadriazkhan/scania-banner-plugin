@@ -9,20 +9,36 @@
 
 
 :host {
-    @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1');
+    $scania-black: #2D2926;
+    $scania-black-80: #53565A;
+    $scania-black-30: #D9D9D9;
+    $scania-white: #FAFAFA;
+    $scania-blue: #041e42;
+    $scania-green: #44a878;
+    $scania-orange: #e35205;
+    $scania-red: #d6001c;
+    $scania-blue-10: #d9e1eb;
+    $scania-green-10: #d3e8d6;
+    $scania-orange-10: #f7eddd;
+    $scania-red-10: #f5e6e8;
+    
+    $primary-font-size: 18px;
+    $secondary-font-size: 14px;
+
+    // @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1');
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    color: #2d2926;
-    font-size: 18px;
+    color: $scania-black;
+    font-size: $primary-font-size;
     font-family: 'Open Sans Condensed', sans-serif;
 
     $banner-colors: (
-        ("greeting", #041e42),
-        ("information", #44a878),
-        ("warning", #e35205),
-        ("danger", #d6001c),
+        ("greeting", $scania-blue),
+        ("information", $scania-green),
+        ("warning", $scania-orange),
+        ("danger", $scania-red),
     );
 
     @each $banner-color in $banner-colors {
@@ -35,10 +51,10 @@
     }
 
     $banner-background-colors: (
-        ("greeting", #d9e1eb),
-        ("information", #d3e8d6),
-        ("warning", #f7e6dd),
-        ("danger", #f5e6e8),
+        ("greeting", $scania-blue-10),
+        ("information", $scania-green-10),
+        ("warning", $scania-orange-10),
+        ("danger", $scania-red-10),
     );
 
     @each $banner-background-color in $banner-background-colors {
@@ -231,10 +247,10 @@
     }
 
     .image-border {
-        border: 2px solid rgb(77, 75, 75);
+        border: 1px solid $scania-black-80;
     }
 
-    $imageSizes: 32, 48, 64, 96, 128, 256;
+    $imageSizes: 32, 40, 48, 64, 96, 128, 256;
 
     @each $imageSize in $imageSizes {
         .is-#{$imageSize}x#{$imageSize} {
@@ -337,8 +353,9 @@
     }
 
     .additional-count {
-        background-color: #d9d9d9;
-        color: red;
+        background-color: $scania-black-30;
+        color: $scania-black-80;
+        font-size: $secondary-font-size;
     }
 
     .margin-auto {
@@ -346,11 +363,11 @@
     }
 
     .background-black {
-        background-color: black;
+        background-color: $scania-black;
     }
     
     .background-grey {
-        background-color: #D9D9D9;
+        background-color: $scania-black-30;
     }
 
     .text-left {
@@ -365,27 +382,10 @@
         text-align: center;
     }
 
-    /* modal */
-
-    .modal-overlay {
-        top: 0;
-        left: 0;
-        background-color: rgba(66, 33, 33, 0.37);
-        z-index: 2;
-    }
-    
-    .modal-body {
-        top: 25px;
-        left: 0;
-        z-index: 2;
+    .align-center-screen {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-    }
-    
-    .content-maximum {
-        max-width: 1000px !important;
-        max-width: 700px !important;
     }
 }

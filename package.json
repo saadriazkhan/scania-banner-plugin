@@ -1,6 +1,6 @@
 {
 	"name": "@scania-plugin/banner",
-	"version": "1.0.66",
+	"version": "1.0.7",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",

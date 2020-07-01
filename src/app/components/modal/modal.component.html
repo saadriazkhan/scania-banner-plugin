@@ -3,12 +3,12 @@
         <div *ngTemplateOutlet="close"></div>
     </div>
 </div>
-<div class="mt-5 position-fixed modal-body width-full height-full">
+<div class="mt-5 position-fixed modal-body width-full height-full align-center-screen">
     <div class="position-fixed background-black br-2">
         <div class="columns">
             <div class="columns is-flex m-4">
                 <left class="column is-narrow is-horizontal-aligned" (click)="previous()">
-                    <div class="is-rounded py-2 px-3 background-grey pointer" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === 0)}">
+                    <div class="is-rounded py-3 px-4 background-grey pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === 0)}">
                         <icon *ngTemplateOutlet="left"></icon>
                     </div>
                 </left>
@@ -21,7 +21,7 @@
                     </div>
                 </content>
                 <right class="column is-narrow is-horizontal-aligned" (click)="next()">
-                    <div class="is-rounded py-2 px-3 background-grey pointer" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === displayList.length -1)}" >
+                    <div class="is-rounded py-3 px-4 background-grey pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === displayList.length -1)}" >
                         <icon *ngTemplateOutlet="right"></icon>
                     </div>
                 </right>

@@ -1,6 +1,6 @@
 <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1' rel='stylesheet' type='text/css'> -->
 
-<div *ngIf="banner && banner.isEnabled && !isBannerHidden()" class="has-banner-shadow p-4"
+<div *ngIf="banner && banner.isEnabled && !isBannerHidden()" class="has-banner-shadow px-4 py-2"
 	[ngClass]="'has-banner-background-' + banner.type">
 	<div class="columns is-flex">
 		<div class="column is-flex">
@@ -21,26 +21,26 @@
 			</banner-content>
 
 			<images *ngFor="let imageUrl of banner.imageUrls; let index = index">
-				<div *ngIf="banner.maxImagesToShow && index < banner.maxImagesToShow" class="ml-4 image is-64x64"
+				<div *ngIf="banner.maxImagesToShow && index < banner.maxImagesToShow" class="ml-2 image"
 					(click)="openModal(imageUrl)">
-					<img class="image-border br-3 pointer" style="width: 64px; height: 64px;" width="64" height="64" [src]="imageUrl">
+					<img class="image-border br-2 pointer" style="width: 40px; height: 40px;" width="40" height="40" [src]="imageUrl">
 				</div>
 			</images>
 
-			<ng-container *ngFor="let videoUrl of banner.videoUrls; let index = index">
+			<div *ngFor="let videoUrl of banner.videoUrls; let index = index">
 				<video-thumbnails *ngIf="banner.maxVideosToShow && index < banner.maxVideosToShow"
-					class="ml-4 pointer" 
+					class="pointer" 
 					(click)="openModal(videoUrl)">
-					<div class="is-64x64 image-border br-3 background-black">
-						<div class="mt-2 ml-2">
+					<div class="ml-2 image-border br-2 background-black">
+						<div class="is-40x40 align-center-screen">
 							<ng-template *ngTemplateOutlet="play">
 							</ng-template>
 						</div>
 					</div>
 				</video-thumbnails>
-			</ng-container>
+			</div>
 
-			<total-count class="ml-4 mt-auto mb-1 pointer">
+			<total-count class="ml-2 mt-auto pointer">
 				<div class="br-10 p-1 additional-count" (click)="openModal()">
 					+{{ displayCount }}
 				</div>
@@ -161,11 +161,11 @@
 </ng-template>
 
 <ng-template #play>
-	<svg width="48" height="48" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="9" cy="9" r="8" stroke="#fff" />
+	<svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="9" cy="9" r="8" stroke="#fafafa" />
 		<path
 			d="M6.33334 13.0197V4.98054C6.33334 4.78992 6.53812 4.66943 6.70475 4.762L13.94 8.78157C14.1114 8.87682 14.1114 9.1234 13.94 9.21865L6.70475 13.2382C6.53812 13.3308 6.33334 13.2103 6.33334 13.0197Z"
-			stroke="#fff" />
+			stroke="#fafafa" />
 	</svg>
 </ng-template>
 

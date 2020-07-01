@@ -1,7 +1,7 @@
 .modal-overlay {
     top: 0;
     left: 0;
-    background-color: rgba(66, 33, 33, 0.37);
+    background-color: rgba(196, 196, 196, 0.7);
     z-index: 2;
 }
 
@@ -9,10 +9,6 @@
     top: 25px;
     left: 0;
     z-index: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .content-maximum {
