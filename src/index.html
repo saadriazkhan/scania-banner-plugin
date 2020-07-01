@@ -20,7 +20,17 @@
 		isEnabled: 'true',
 		label: 'this is the label',
 		content: 'here comes the content',
-		imageUrls: ['https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg', 'https://image.shutterstock.com/z/stock-photo-large-beautiful-drops-of-transparent-rain-water-on-a-green-leaf-macro-drops-of-dew-in-the-morning-668593321.jpg', 'https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-600w-766886038.jpg'],
+		// imageUrls: ['https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg', 'https://image.shutterstock.com/z/stock-photo-large-beautiful-drops-of-transparent-rain-water-on-a-green-leaf-macro-drops-of-dew-in-the-morning-668593321.jpg', 'https://image.shutterstock.com/image-photo/autumn-forest-nature-vivid-morning-600w-766886038.jpg'],
+		imageUrls: [
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360'
+		],
 		maxImagesToShow: 2,
 		videoUrls: ['https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4', 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4', 'https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4'],
 		maxVideosToShow: 2,
@@ -30,10 +40,35 @@
 		},
 		// startDateTime: '1593008622000',
 		// endDateTime: '1593527022000'
+	};
+	const configuration = {
+		type: 'warning', // can only be 'greeting', 'action', 'warning', 'danger'
+		isEnabled: true,
+		label: 'Unable to load vehicle list',
+		content: 'Due to heavy traffic dashobord crashed', // optional
+		imageUrls: [
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360',
+			'https://placekitten.com/640/360'
+		], // optional
+		maxImagesToShow: 5,
+		videoUrls: [] // '<:'<some-array-of-url>', // optional
+		// maxVideosToShow: '<number-of-video-icons-to-show-in-banner>' // optional
+		// action: {
+		//  text: '<some-action-button-text>',
+		//  url: '<url-if needed>' // optional
+		// },
+		// startDateTime: '<startDateTimeStamp>', // optional epoch datetime stamp
+		// endDateTime: '<endDateTimeStamp>', // optional epoch datetime stamp
 	}
 
 
-	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
+	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(configuration));
 
 </script>
 

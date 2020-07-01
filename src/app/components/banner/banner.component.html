@@ -47,7 +47,7 @@
 				</div>
 			</total-count>
 
-			<action class="ml-8 is-horizontal-aligned has-text-weight-bold">
+			<action *ngIf="banner.action" class="ml-8 is-horizontal-aligned has-text-weight-bold">
 				<div *ngIf="banner.action.url; else simpleAction" class="is-underlined">
 					<a [href]="banner.action.url" (click)="onActionButtonClick()"
 						[ngClass]="'has-color-' + banner.type">
