@@ -40,10 +40,11 @@ export class ModalComponent implements OnInit {
 		];
 
 		if (this.displayItemSource)
-			this.displayList.forEach((element, index) => {
-				if (element.src === this.displayItemSource)
+			for (let index = 0; index < this.displayList.length; index++)
+				if (this.displayList[index].src === this.displayItemSource) {
 					this.displayItemIndex = index;
-			});
+					break;
+				}
 
 	}
 
