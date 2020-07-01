@@ -25,6 +25,11 @@ export class ModalComponent implements OnInit {
 	constructor() { }
 
 	public ngOnInit(): void {
+		if (!this.videoUrls)
+			this.videoUrls = [];
+		if (!this.imageUrls)
+			this.imageUrls = [];
+
 		this.displayList = [
 			...this.imageUrls.map(imageUrl => (
 				{ src: imageUrl, type: 'image' })
