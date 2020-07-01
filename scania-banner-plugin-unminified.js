@@ -114217,8 +114217,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _createClass2(ModalComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this167 = this;
-
             if (!this.videoUrls) this.videoUrls = [];
             if (!this.imageUrls) this.imageUrls = [];
             this.displayList = [].concat(_toConsumableArray(this.imageUrls.map(function (imageUrl) {
@@ -114232,9 +114230,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 type: 'video'
               };
             })));
-            if (this.displayItemSource) this.displayList.forEach(function (element, index) {
-              if (element.src === _this167.displayItemSource) _this167.displayItemIndex = index;
-            });
+            if (this.displayItemSource) for (var index = 0; index < this.displayList.length; index++) {
+              if (this.displayList[index].src === this.displayItemSource) {
+                this.displayItemIndex = index;
+                break;
+              }
+            }
           }
         }, {
           key: "closeModal",
