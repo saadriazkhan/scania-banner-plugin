@@ -20,6 +20,8 @@
 				{{banner.content}}
 			</banner-content>
 
+			<div class="gap-100"></div>
+
 			<images *ngFor="let imageUrl of banner.imageUrls; let index = index">
 				<div *ngIf="banner.maxImagesToShow && index < banner.maxImagesToShow" class="ml-2 image"
 					(click)="openModal(imageUrl)">

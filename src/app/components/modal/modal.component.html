@@ -4,24 +4,24 @@
     </div>
 </div>
 <div class="mt-5 position-fixed modal-body width-full height-full align-center-screen" (click)="closeModal()">
-    <div class="position-fixed background-black br-2" (click)="$event.stopPropagation()">
+    <div class="position-fixed" (click)="$event.stopPropagation()">
         <div class="columns">
-            <div class="columns is-flex m-4">
+            <div class="columns is-flex">
                 <left class="column is-narrow is-horizontal-aligned" (click)="previous()">
-                    <div class="is-rounded py-3 px-4 background-grey pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === 0)}">
+                    <div class="is-rounded p-3 background-white pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === 0)}">
                         <icon *ngTemplateOutlet="left"></icon>
                     </div>
                 </left>
                 <content class="column width-full height-full">
                     <div *ngIf="displayList[displayItemIndex].type === 'video'" class="m-4">
-                        <video class="content-maximum" [src]="displayList[displayItemIndex].src" controls></video>
+                        <video class="content-maximum br-2" [src]="displayList[displayItemIndex].src" controls></video>
                     </div>
                     <div *ngIf="displayList[displayItemIndex].type === 'image'" class="m-4">
-                        <img class="content-maximum" [src]="displayList[displayItemIndex].src">
+                        <img class="content-maximum br-2" [src]="displayList[displayItemIndex].src">
                     </div>
                 </content>
                 <right class="column is-narrow is-horizontal-aligned" (click)="next()">
-                    <div class="is-rounded py-3 px-4 background-grey pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === displayList.length -1)}" >
+                    <div class="is-rounded p-3 background-white pointer align-center-screen" [ngClass]="{'opacity-5 forbidden': (displayItemIndex === displayList.length -1)}" >
                         <icon *ngTemplateOutlet="right"></icon>
                     </div>
                 </right>

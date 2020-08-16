@@ -1,6 +1,6 @@
 {
 	"name": "@scania-plugin/banner",
-	"version": "1.0.71",
+	"version": "1.0.8",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
@@ -15,6 +15,7 @@
 		"@angular/compiler": "~9.1.11",
 		"@angular/core": "~9.1.11",
 		"@angular/elements": "^9.1.11",
+		"@angular/localize": "^9.1.12",
 		"@angular/platform-browser": "~9.1.11",
 		"@angular/platform-browser-dynamic": "~9.1.11",
 		"@webcomponents/custom-elements": "^1.4.1",

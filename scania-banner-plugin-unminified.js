@@ -113355,7 +113355,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function BannerComponent_div_0_banner_content_10_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "banner-content", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "banner-content", 25);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -113371,13 +113371,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_images_11_div_1_Template(rf, ctx) {
+    function BannerComponent_div_0_images_12_div_1_Template(rf, ctx) {
       if (rf & 1) {
         var _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 27);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_images_11_div_1_Template_div_click_0_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_images_12_div_1_Template_div_click_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r37);
 
           var imageUrl_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
@@ -113387,7 +113387,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return ctx_r35.openModal(imageUrl_r32);
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 28);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113401,11 +113401,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_images_11_Template(rf, ctx) {
+    function BannerComponent_div_0_images_12_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "images");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_images_11_div_1_Template, 2, 1, "div", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_images_12_div_1_Template, 2, 1, "div", 26);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113421,21 +113421,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_div_12_video_thumbnails_1_3_ng_template_0_Template(rf, ctx) {}
+    function BannerComponent_div_0_div_13_video_thumbnails_1_3_ng_template_0_Template(rf, ctx) {}
 
-    function BannerComponent_div_0_div_12_video_thumbnails_1_3_Template(rf, ctx) {
+    function BannerComponent_div_0_div_13_video_thumbnails_1_3_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BannerComponent_div_0_div_12_video_thumbnails_1_3_ng_template_0_Template, 0, 0, "ng-template");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BannerComponent_div_0_div_13_video_thumbnails_1_3_ng_template_0_Template, 0, 0, "ng-template");
       }
     }
 
-    function BannerComponent_div_0_div_12_video_thumbnails_1_Template(rf, ctx) {
+    function BannerComponent_div_0_div_13_video_thumbnails_1_Template(rf, ctx) {
       if (rf & 1) {
         var _r46 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "video-thumbnails", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "video-thumbnails", 30);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_div_12_video_thumbnails_1_Template_video_thumbnails_click_0_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_div_13_video_thumbnails_1_Template_video_thumbnails_click_0_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r46);
 
           var videoUrl_r39 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
@@ -113445,11 +113445,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return ctx_r44.openModal(videoUrl_r39);
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 31);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 32);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, BannerComponent_div_0_div_12_video_thumbnails_1_3_Template, 1, 0, undefined, 32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, BannerComponent_div_0_div_13_video_thumbnails_1_3_Template, 1, 0, undefined, 33);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -113469,11 +113469,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_div_12_Template(rf, ctx) {
+    function BannerComponent_div_0_div_13_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_div_12_video_thumbnails_1_Template, 4, 1, "video-thumbnails", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_div_13_video_thumbnails_1_Template, 4, 1, "video-thumbnails", 29);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113489,15 +113489,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_action_16_div_1_Template(rf, ctx) {
+    function BannerComponent_div_0_action_17_div_1_Template(rf, ctx) {
       if (rf & 1) {
         var _r51 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 37);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 38);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_action_16_div_1_Template_a_click_1_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_action_17_div_1_Template_a_click_1_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r51);
 
           var ctx_r50 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](3);
@@ -113525,9 +113525,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_action_16_ng_template_2_Template(rf, ctx) {
+    function BannerComponent_div_0_action_17_ng_template_2_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 38);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 39);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -113545,13 +113545,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function BannerComponent_div_0_action_16_Template(rf, ctx) {
+    function BannerComponent_div_0_action_17_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "action", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "action", 34);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_action_16_div_1_Template, 3, 3, "div", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_div_0_action_17_div_1_Template, 3, 3, "div", 35);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, BannerComponent_div_0_action_16_ng_template_2_Template, 2, 2, "ng-template", null, 35, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, BannerComponent_div_0_action_17_ng_template_2_Template, 2, 2, "ng-template", null, 36, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113564,12 +113564,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r27.banner.action.url)("ngIfElse", _r48);
-      }
-    }
-
-    function BannerComponent_div_0_ng_container_19_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
       }
     }
 
@@ -113586,6 +113580,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function BannerComponent_div_0_ng_container_22_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
+      }
+    }
+
+    function BannerComponent_div_0_ng_container_23_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
       }
@@ -113621,15 +113621,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, BannerComponent_div_0_banner_content_10_Template, 2, 1, "banner-content", 17);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, BannerComponent_div_0_images_11_Template, 2, 1, "images", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "div", 18);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, BannerComponent_div_0_div_12_Template, 2, 1, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, BannerComponent_div_0_images_12_Template, 2, 1, "images", 19);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "total-count", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, BannerComponent_div_0_div_13_Template, 2, 1, "div", 19);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "total-count", 20);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_Template_div_click_14_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 21);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_Template_div_click_15_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r53);
 
           var ctx_r52 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -113637,21 +113639,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return ctx_r52.openModal();
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, BannerComponent_div_0_action_16_Template, 4, 2, "action", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, BannerComponent_div_0_action_17_Template, 4, 2, "action", 22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 22);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 23);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_Template_div_click_18_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 24);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BannerComponent_div_0_Template_div_click_19_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r53);
 
           var ctx_r54 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -113659,13 +113661,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return ctx_r54.onCloseButtonClick();
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, BannerComponent_div_0_ng_container_19_Template, 1, 0, "ng-container", 15);
-
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, BannerComponent_div_0_ng_container_20_Template, 1, 0, "ng-container", 15);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](21, BannerComponent_div_0_ng_container_21_Template, 1, 0, "ng-container", 15);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, BannerComponent_div_0_ng_container_22_Template, 1, 0, "ng-container", 15);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, BannerComponent_div_0_ng_container_23_Template, 1, 0, "ng-container", 15);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -113725,7 +113727,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.banner.content);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.banner.imageUrls);
 
@@ -113765,7 +113767,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "scania-plugin-modal", 39);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "scania-plugin-modal", 40);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("closeModalEventEmitter", function BannerComponent_ng_container_1_Template_scania_plugin_modal_closeModalEventEmitter_1_listener() {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r56);
@@ -113793,11 +113795,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 41);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 42);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 43);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113807,11 +113809,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 44);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113821,11 +113823,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 46);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 47);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113835,11 +113837,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 40);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 47);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "path", 48);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 48);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 49);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113849,11 +113851,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 50);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 50);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 51);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 51);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113863,11 +113865,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 50);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 52);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 53);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 51);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -113877,21 +113879,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 50);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "g", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "g", 54);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 55);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "path", 55);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "path", 56);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "defs");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "clipPath", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "clipPath", 57);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "rect", 57);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "rect", 58);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -113905,21 +113907,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 50);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "g", 53);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "g", 54);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 58);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 59);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "path", 55);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "path", 56);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "defs");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "clipPath", 56);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "clipPath", 57);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "rect", 57);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "rect", 58);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -113933,11 +113935,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 59);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "svg", 60);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 60);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "circle", 61);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 61);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "path", 62);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -114028,10 +114030,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"]],
         decls: 20,
         vars: 2,
-        consts: [["class", "has-banner-shadow px-4 py-2", 3, "ngClass", 4, "ngIf"], [4, "ngIf"], ["closegreeting", ""], ["closeinformation", ""], ["closewarning", ""], ["closedanger", ""], ["greeting", ""], ["information", ""], ["warning", ""], ["danger", ""], ["play", ""], [1, "has-banner-shadow", "px-4", "py-2", 3, "ngClass"], [1, "columns", "is-flex"], [1, "column", "is-flex"], [1, "icon", "is-medium", "is-horizontal-aligned"], [4, "ngIf", "ngIfThen"], [1, "ml-4", "is-uppercase", "is-underlined", "is-horizontal-aligned", "has-text-weight-bold", 3, "ngClass"], ["class", "ml-4 is-horizontal-aligned", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "ml-2", "mt-auto", "pointer"], [1, "br-10", "p-1", "additional-count", 3, "click"], ["class", "ml-8 is-horizontal-aligned has-text-weight-bold", 4, "ngIf"], [1, "column", "is-narrow", "is-horizontal-aligned"], [1, "icon", "is-medium", "pointer", 3, "click"], [1, "ml-4", "is-horizontal-aligned"], ["class", "ml-2 image", 3, "click", 4, "ngIf"], [1, "ml-2", "image", 3, "click"], ["width", "40", "height", "40", 1, "image-border", "br-2", "pointer", 2, "width", "40px", "height", "40px", 3, "src"], ["class", "pointer", 3, "click", 4, "ngIf"], [1, "pointer", 3, "click"], [1, "ml-2", "image-border", "br-2", "background-black"], [1, "is-40x40", "align-center-screen"], [4, "ngTemplateOutlet"], [1, "ml-8", "is-horizontal-aligned", "has-text-weight-bold"], ["class", "is-underlined", 4, "ngIf", "ngIfElse"], ["simpleAction", ""], [1, "is-underlined"], [3, "href", "ngClass", "click"], [3, "ngClass"], [3, "imageUrls", "videoUrls", "displayItemSource", "closeModalEventEmitter"], ["width", "16", "height", "16", "viewBox", "0 0 16 16", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M14 2L2 14", "stroke", "#041E42", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#041E42", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#44A878", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#44A878", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#E35205", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#E35205", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#D6001C", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#D6001C", "stroke-width", "3"], ["width", "24", "height", "24", "viewBox", "0 0 24 24", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "12", "cy", "12", "r", "12", "fill", "#041E42"], ["d", "M11.1299 9.28496H13.0499V17.25H11.1299V9.28496ZM11.1299 6.20996H13.0499V7.94996H11.1299V6.20996Z", "fill", "#FAFAFA"], ["cx", "12", "cy", "12", "r", "12", "fill", "#44A878"], ["clip-path", "url(#clip0)"], ["d", "M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z", "fill", "#E35205"], ["d", "M11.25 11.325H13.17V19.29H11.25V11.325ZM11.25 8.25H13.17V9.99H11.25V8.25Z", "fill", "#FAFAFA"], ["id", "clip0"], ["width", "24", "height", "24", "fill", "white"], ["d", "M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z", "fill", "#D6001C"], ["width", "25", "height", "25", "viewBox", "0 0 18 18", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "9", "cy", "9", "r", "8", "stroke", "#fafafa"], ["d", "M6.33334 13.0197V4.98054C6.33334 4.78992 6.53812 4.66943 6.70475 4.762L13.94 8.78157C14.1114 8.87682 14.1114 9.1234 13.94 9.21865L6.70475 13.2382C6.53812 13.3308 6.33334 13.2103 6.33334 13.0197Z", "stroke", "#fafafa"]],
+        consts: [["class", "has-banner-shadow px-4 py-2", 3, "ngClass", 4, "ngIf"], [4, "ngIf"], ["closegreeting", ""], ["closeinformation", ""], ["closewarning", ""], ["closedanger", ""], ["greeting", ""], ["information", ""], ["warning", ""], ["danger", ""], ["play", ""], [1, "has-banner-shadow", "px-4", "py-2", 3, "ngClass"], [1, "columns", "is-flex"], [1, "column", "is-flex"], [1, "icon", "is-medium", "is-horizontal-aligned"], [4, "ngIf", "ngIfThen"], [1, "ml-4", "is-uppercase", "is-underlined", "is-horizontal-aligned", "has-text-weight-bold", 3, "ngClass"], ["class", "ml-4 is-horizontal-aligned", 4, "ngIf"], [1, "gap-100"], [4, "ngFor", "ngForOf"], [1, "ml-2", "mt-auto", "pointer"], [1, "br-10", "p-1", "additional-count", 3, "click"], ["class", "ml-8 is-horizontal-aligned has-text-weight-bold", 4, "ngIf"], [1, "column", "is-narrow", "is-horizontal-aligned"], [1, "icon", "is-medium", "pointer", 3, "click"], [1, "ml-4", "is-horizontal-aligned"], ["class", "ml-2 image", 3, "click", 4, "ngIf"], [1, "ml-2", "image", 3, "click"], ["width", "40", "height", "40", 1, "image-border", "br-2", "pointer", 2, "width", "40px", "height", "40px", 3, "src"], ["class", "pointer", 3, "click", 4, "ngIf"], [1, "pointer", 3, "click"], [1, "ml-2", "image-border", "br-2", "background-black"], [1, "is-40x40", "align-center-screen"], [4, "ngTemplateOutlet"], [1, "ml-8", "is-horizontal-aligned", "has-text-weight-bold"], ["class", "is-underlined", 4, "ngIf", "ngIfElse"], ["simpleAction", ""], [1, "is-underlined"], [3, "href", "ngClass", "click"], [3, "ngClass"], [3, "imageUrls", "videoUrls", "displayItemSource", "closeModalEventEmitter"], ["width", "16", "height", "16", "viewBox", "0 0 16 16", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["d", "M14 2L2 14", "stroke", "#041E42", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#041E42", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#44A878", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#44A878", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#E35205", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#E35205", "stroke-width", "3"], ["d", "M14 2L2 14", "stroke", "#D6001C", "stroke-width", "3"], ["d", "M2 2L14 14", "stroke", "#D6001C", "stroke-width", "3"], ["width", "24", "height", "24", "viewBox", "0 0 24 24", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "12", "cy", "12", "r", "12", "fill", "#041E42"], ["d", "M11.1299 9.28496H13.0499V17.25H11.1299V9.28496ZM11.1299 6.20996H13.0499V7.94996H11.1299V6.20996Z", "fill", "#FAFAFA"], ["cx", "12", "cy", "12", "r", "12", "fill", "#44A878"], ["clip-path", "url(#clip0)"], ["d", "M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z", "fill", "#E35205"], ["d", "M11.25 11.325H13.17V19.29H11.25V11.325ZM11.25 8.25H13.17V9.99H11.25V8.25Z", "fill", "#FAFAFA"], ["id", "clip0"], ["width", "24", "height", "24", "fill", "white"], ["d", "M11.134 3C11.5189 2.33333 12.4811 2.33333 12.866 3L22.8253 20.25C23.2102 20.9167 22.7291 21.75 21.9593 21.75H2.04071C1.27091 21.75 0.789782 20.9167 1.17468 20.25L11.134 3Z", "fill", "#D6001C"], ["width", "25", "height", "25", "viewBox", "0 0 18 18", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "9", "cy", "9", "r", "8", "stroke", "#fafafa"], ["d", "M6.33334 13.0197V4.98054C6.33334 4.78992 6.53812 4.66943 6.70475 4.762L13.94 8.78157C14.1114 8.87682 14.1114 9.1234 13.94 9.21865L6.70475 13.2382C6.53812 13.3308 6.33334 13.2103 6.33334 13.0197Z", "stroke", "#fafafa"]],
         template: function BannerComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BannerComponent_div_0_Template, 23, 24, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, BannerComponent_div_0_Template, 24, 24, "div", 0);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, BannerComponent_ng_container_1_Template, 2, 3, "ng-container", 1);
 
@@ -114063,7 +114065,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         },
         directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgTemplateOutlet"], _modal_modal_component__WEBPACK_IMPORTED_MODULE_2__["ModalComponent"]],
-        styles: [":host {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  color: #2D2926;\n  font-size: 18px;\n  font-family: \"Open Sans Condensed\", sans-serif;\n  /* creates each class */\n  /* helper classes */\n  /* creates each class */\n  /* utility classes */\n}\n:host .has-color-greeting {\n  color: #041e42;\n}\n:host .has-color-information {\n  color: #44a878;\n}\n:host .has-color-warning {\n  color: #e35205;\n}\n:host .has-color-danger {\n  color: #d6001c;\n}\n:host .has-banner-background-greeting {\n  background-color: #d9e1eb;\n}\n:host .has-banner-background-information {\n  background-color: #d3e8d6;\n}\n:host .has-banner-background-warning {\n  background-color: #f7eddd;\n}\n:host .has-banner-background-danger {\n  background-color: #f5e6e8;\n}\n:host .m-0 {\n  margin: 0;\n}\n:host .p-0 {\n  padding: 0;\n}\n:host .mt-0 {\n  margin-top: 0;\n}\n:host .pt-0 {\n  padding-top: 0;\n}\n:host .mr-0 {\n  margin-right: 0;\n}\n:host .pr-0 {\n  padding-right: 0;\n}\n:host .mb-0 {\n  margin-bottom: 0;\n}\n:host .pb-0 {\n  padding-bottom: 0;\n}\n:host .ml-0 {\n  margin-left: 0;\n}\n:host .pl-0 {\n  padding-left: 0;\n}\n:host .mx-0 {\n  margin-left: 0;\n  margin-right: 0;\n}\n:host .px-0 {\n  padding-left: 0;\n  padding-right: 0;\n}\n:host .my-0 {\n  margin-top: 0;\n  margin-bottom: 0;\n}\n:host .py-0 {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n:host .m-1 {\n  margin: 0.25rem;\n}\n:host .p-1 {\n  padding: 0.25rem;\n}\n:host .mt-1 {\n  margin-top: 0.25rem;\n}\n:host .pt-1 {\n  padding-top: 0.25rem;\n}\n:host .mr-1 {\n  margin-right: 0.25rem;\n}\n:host .pr-1 {\n  padding-right: 0.25rem;\n}\n:host .mb-1 {\n  margin-bottom: 0.25rem;\n}\n:host .pb-1 {\n  padding-bottom: 0.25rem;\n}\n:host .ml-1 {\n  margin-left: 0.25rem;\n}\n:host .pl-1 {\n  padding-left: 0.25rem;\n}\n:host .mx-1 {\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n}\n:host .px-1 {\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n}\n:host .my-1 {\n  margin-top: 0.25rem;\n  margin-bottom: 0.25rem;\n}\n:host .py-1 {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n:host .m-2 {\n  margin: 0.5rem;\n}\n:host .p-2 {\n  padding: 0.5rem;\n}\n:host .mt-2 {\n  margin-top: 0.5rem;\n}\n:host .pt-2 {\n  padding-top: 0.5rem;\n}\n:host .mr-2 {\n  margin-right: 0.5rem;\n}\n:host .pr-2 {\n  padding-right: 0.5rem;\n}\n:host .mb-2 {\n  margin-bottom: 0.5rem;\n}\n:host .pb-2 {\n  padding-bottom: 0.5rem;\n}\n:host .ml-2 {\n  margin-left: 0.5rem;\n}\n:host .pl-2 {\n  padding-left: 0.5rem;\n}\n:host .mx-2 {\n  margin-left: 0.5rem;\n  margin-right: 0.5rem;\n}\n:host .px-2 {\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n:host .my-2 {\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n:host .py-2 {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n:host .m-3 {\n  margin: 0.75rem;\n}\n:host .p-3 {\n  padding: 0.75rem;\n}\n:host .mt-3 {\n  margin-top: 0.75rem;\n}\n:host .pt-3 {\n  padding-top: 0.75rem;\n}\n:host .mr-3 {\n  margin-right: 0.75rem;\n}\n:host .pr-3 {\n  padding-right: 0.75rem;\n}\n:host .mb-3 {\n  margin-bottom: 0.75rem;\n}\n:host .pb-3 {\n  padding-bottom: 0.75rem;\n}\n:host .ml-3 {\n  margin-left: 0.75rem;\n}\n:host .pl-3 {\n  padding-left: 0.75rem;\n}\n:host .mx-3 {\n  margin-left: 0.75rem;\n  margin-right: 0.75rem;\n}\n:host .px-3 {\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n}\n:host .my-3 {\n  margin-top: 0.75rem;\n  margin-bottom: 0.75rem;\n}\n:host .py-3 {\n  padding-top: 0.75rem;\n  padding-bottom: 0.75rem;\n}\n:host .m-4 {\n  margin: 1rem;\n}\n:host .p-4 {\n  padding: 1rem;\n}\n:host .mt-4 {\n  margin-top: 1rem;\n}\n:host .pt-4 {\n  padding-top: 1rem;\n}\n:host .mr-4 {\n  margin-right: 1rem;\n}\n:host .pr-4 {\n  padding-right: 1rem;\n}\n:host .mb-4 {\n  margin-bottom: 1rem;\n}\n:host .pb-4 {\n  padding-bottom: 1rem;\n}\n:host .ml-4 {\n  margin-left: 1rem;\n}\n:host .pl-4 {\n  padding-left: 1rem;\n}\n:host .mx-4 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n:host .px-4 {\n  padding-left: 1rem;\n  padding-right: 1rem;\n}\n:host .my-4 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n:host .py-4 {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n}\n:host .m-5 {\n  margin: 1.25rem;\n}\n:host .p-5 {\n  padding: 1.25rem;\n}\n:host .mt-5 {\n  margin-top: 1.25rem;\n}\n:host .pt-5 {\n  padding-top: 1.25rem;\n}\n:host .mr-5 {\n  margin-right: 1.25rem;\n}\n:host .pr-5 {\n  padding-right: 1.25rem;\n}\n:host .mb-5 {\n  margin-bottom: 1.25rem;\n}\n:host .pb-5 {\n  padding-bottom: 1.25rem;\n}\n:host .ml-5 {\n  margin-left: 1.25rem;\n}\n:host .pl-5 {\n  padding-left: 1.25rem;\n}\n:host .mx-5 {\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n}\n:host .px-5 {\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n:host .my-5 {\n  margin-top: 1.25rem;\n  margin-bottom: 1.25rem;\n}\n:host .py-5 {\n  padding-top: 1.25rem;\n  padding-bottom: 1.25rem;\n}\n:host .m-6 {\n  margin: 1.5rem;\n}\n:host .p-6 {\n  padding: 1.5rem;\n}\n:host .mt-6 {\n  margin-top: 1.5rem;\n}\n:host .pt-6 {\n  padding-top: 1.5rem;\n}\n:host .mr-6 {\n  margin-right: 1.5rem;\n}\n:host .pr-6 {\n  padding-right: 1.5rem;\n}\n:host .mb-6 {\n  margin-bottom: 1.5rem;\n}\n:host .pb-6 {\n  padding-bottom: 1.5rem;\n}\n:host .ml-6 {\n  margin-left: 1.5rem;\n}\n:host .pl-6 {\n  padding-left: 1.5rem;\n}\n:host .mx-6 {\n  margin-left: 1.5rem;\n  margin-right: 1.5rem;\n}\n:host .px-6 {\n  padding-left: 1.5rem;\n  padding-right: 1.5rem;\n}\n:host .my-6 {\n  margin-top: 1.5rem;\n  margin-bottom: 1.5rem;\n}\n:host .py-6 {\n  padding-top: 1.5rem;\n  padding-bottom: 1.5rem;\n}\n:host .m-7 {\n  margin: 1.75rem;\n}\n:host .p-7 {\n  padding: 1.75rem;\n}\n:host .mt-7 {\n  margin-top: 1.75rem;\n}\n:host .pt-7 {\n  padding-top: 1.75rem;\n}\n:host .mr-7 {\n  margin-right: 1.75rem;\n}\n:host .pr-7 {\n  padding-right: 1.75rem;\n}\n:host .mb-7 {\n  margin-bottom: 1.75rem;\n}\n:host .pb-7 {\n  padding-bottom: 1.75rem;\n}\n:host .ml-7 {\n  margin-left: 1.75rem;\n}\n:host .pl-7 {\n  padding-left: 1.75rem;\n}\n:host .mx-7 {\n  margin-left: 1.75rem;\n  margin-right: 1.75rem;\n}\n:host .px-7 {\n  padding-left: 1.75rem;\n  padding-right: 1.75rem;\n}\n:host .my-7 {\n  margin-top: 1.75rem;\n  margin-bottom: 1.75rem;\n}\n:host .py-7 {\n  padding-top: 1.75rem;\n  padding-bottom: 1.75rem;\n}\n:host .m-8 {\n  margin: 2rem;\n}\n:host .p-8 {\n  padding: 2rem;\n}\n:host .mt-8 {\n  margin-top: 2rem;\n}\n:host .pt-8 {\n  padding-top: 2rem;\n}\n:host .mr-8 {\n  margin-right: 2rem;\n}\n:host .pr-8 {\n  padding-right: 2rem;\n}\n:host .mb-8 {\n  margin-bottom: 2rem;\n}\n:host .pb-8 {\n  padding-bottom: 2rem;\n}\n:host .ml-8 {\n  margin-left: 2rem;\n}\n:host .pl-8 {\n  padding-left: 2rem;\n}\n:host .mx-8 {\n  margin-left: 2rem;\n  margin-right: 2rem;\n}\n:host .px-8 {\n  padding-left: 2rem;\n  padding-right: 2rem;\n}\n:host .my-8 {\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n}\n:host .py-8 {\n  padding-top: 2rem;\n  padding-bottom: 2rem;\n}\n:host .mt-auto {\n  margin-top: auto;\n}\n:host .width-quarter {\n  width: 25%;\n}\n:host .height-quarter {\n  height: 25%;\n}\n:host .width-half {\n  width: 50%;\n}\n:host .height-half {\n  height: 50%;\n}\n:host .width-three-quarter {\n  width: 75%;\n}\n:host .height-three-quarter {\n  height: 75%;\n}\n:host .width-full {\n  width: 100%;\n}\n:host .height-full {\n  height: 100%;\n}\n:host .br-0 {\n  border-radius: 0 !important;\n}\n:host .br-1 {\n  border-radius: 4px !important;\n}\n:host .br-2 {\n  border-radius: 8px !important;\n}\n:host .br-3 {\n  border-radius: 12px !important;\n}\n:host .br-4 {\n  border-radius: 16px !important;\n}\n:host .br-5 {\n  border-radius: 20px !important;\n}\n:host .br-6 {\n  border-radius: 24px !important;\n}\n:host .br-7 {\n  border-radius: 28px !important;\n}\n:host .br-8 {\n  border-radius: 32px !important;\n}\n:host .br-9 {\n  border-radius: 36px !important;\n}\n:host .br-10 {\n  border-radius: 40px !important;\n}\n:host .opacity-0 {\n  opacity: 0;\n}\n:host .opacity-1 {\n  opacity: 0.1;\n}\n:host .opacity-2 {\n  opacity: 0.2;\n}\n:host .opacity-3 {\n  opacity: 0.3;\n}\n:host .opacity-4 {\n  opacity: 0.4;\n}\n:host .opacity-5 {\n  opacity: 0.5;\n}\n:host .opacity-6 {\n  opacity: 0.6;\n}\n:host .opacity-7 {\n  opacity: 0.7;\n}\n:host .opacity-8 {\n  opacity: 0.8;\n}\n:host .opacity-9 {\n  opacity: 0.9;\n}\n:host .opacity-10 {\n  opacity: 1;\n}\n:host .is-rounded {\n  border-radius: 9999px;\n}\n:host .image {\n  display: block;\n  position: relative;\n}\n:host .image img {\n  display: block;\n  height: auto;\n  width: 100%;\n}\n:host .image-border {\n  border: 1px solid #53565A;\n}\n:host .is-32x32 {\n  height: 32px !important;\n  width: 32px !important;\n}\n:host .is-40x40 {\n  height: 40px !important;\n  width: 40px !important;\n}\n:host .is-48x48 {\n  height: 48px !important;\n  width: 48px !important;\n}\n:host .is-64x64 {\n  height: 64px !important;\n  width: 64px !important;\n}\n:host .is-96x96 {\n  height: 96px !important;\n  width: 96px !important;\n}\n:host .is-128x128 {\n  height: 128px !important;\n  width: 128px !important;\n}\n:host .is-256x256 {\n  height: 256px !important;\n  width: 256px !important;\n}\n:host .column {\n  display: block;\n  flex-basis: 0;\n  flex-grow: 1;\n  flex-shrink: 1;\n}\n:host .column.is-narrow {\n  flex: none;\n}\n:host .has-banner-shadow {\n  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n:host .has-text-weight-bold {\n  font-weight: bold;\n}\n:host .position-relative {\n  position: relative;\n}\n:host .position-fixed {\n  position: fixed;\n}\n:host .position-absolute {\n  position: absolute;\n}\n:host .is-flex {\n  display: flex;\n}\n:host .is-underlined {\n  text-decoration: underline;\n}\n:host .is-uppercase {\n  text-transform: uppercase;\n}\n:host .pointer {\n  cursor: pointer;\n}\n:host .forbidden {\n  cursor: not-allowed;\n}\n:host .icon {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n:host .icon.is-small {\n  height: 1rem;\n  width: 1rem;\n}\n:host .icon.is-medium {\n  height: 2rem;\n  width: 2rem;\n}\n:host .icon.is-large {\n  height: 3rem;\n  width: 3rem;\n}\n:host .is-pulled-left {\n  float: left;\n}\n:host .is-pulled-right {\n  float: right;\n}\n:host .is-horizontal-aligned {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n:host .is-hidden {\n  display: none;\n}\n:host .additional-count {\n  background-color: #D9D9D9;\n  color: #53565A;\n  font-size: 14px;\n}\n:host .margin-auto {\n  margin: auto;\n}\n:host .background-black {\n  background-color: #2D2926;\n}\n:host .background-grey {\n  background-color: #D9D9D9;\n}\n:host .text-left {\n  text-align: left;\n}\n:host .text-right {\n  text-align: right;\n}\n:host .text-center {\n  text-align: center;\n}\n:host .align-center-screen {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n}"],
+        styles: [":host {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  color: #2d2926;\n  font-size: 18px;\n  /* creates each class */\n  /* helper classes */\n  /* creates each class */\n  /* utility classes */\n}\n:host .has-color-greeting {\n  color: #041e42;\n}\n:host .has-color-information {\n  color: #44a878;\n}\n:host .has-color-warning {\n  color: #e35205;\n}\n:host .has-color-danger {\n  color: #d6001c;\n}\n:host .has-banner-background-greeting {\n  background-color: #d9e1eb;\n}\n:host .has-banner-background-information {\n  background-color: #d3e8d6;\n}\n:host .has-banner-background-warning {\n  background-color: #f7eddd;\n}\n:host .has-banner-background-danger {\n  background-color: #f5e6e8;\n}\n:host .m-0 {\n  margin: 0;\n}\n:host .p-0 {\n  padding: 0;\n}\n:host .mt-0 {\n  margin-top: 0;\n}\n:host .pt-0 {\n  padding-top: 0;\n}\n:host .mr-0 {\n  margin-right: 0;\n}\n:host .pr-0 {\n  padding-right: 0;\n}\n:host .mb-0 {\n  margin-bottom: 0;\n}\n:host .pb-0 {\n  padding-bottom: 0;\n}\n:host .ml-0 {\n  margin-left: 0;\n}\n:host .pl-0 {\n  padding-left: 0;\n}\n:host .mx-0 {\n  margin-left: 0;\n  margin-right: 0;\n}\n:host .px-0 {\n  padding-left: 0;\n  padding-right: 0;\n}\n:host .my-0 {\n  margin-top: 0;\n  margin-bottom: 0;\n}\n:host .py-0 {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n:host .m-1 {\n  margin: 0.25rem;\n}\n:host .p-1 {\n  padding: 0.25rem;\n}\n:host .mt-1 {\n  margin-top: 0.25rem;\n}\n:host .pt-1 {\n  padding-top: 0.25rem;\n}\n:host .mr-1 {\n  margin-right: 0.25rem;\n}\n:host .pr-1 {\n  padding-right: 0.25rem;\n}\n:host .mb-1 {\n  margin-bottom: 0.25rem;\n}\n:host .pb-1 {\n  padding-bottom: 0.25rem;\n}\n:host .ml-1 {\n  margin-left: 0.25rem;\n}\n:host .pl-1 {\n  padding-left: 0.25rem;\n}\n:host .mx-1 {\n  margin-left: 0.25rem;\n  margin-right: 0.25rem;\n}\n:host .px-1 {\n  padding-left: 0.25rem;\n  padding-right: 0.25rem;\n}\n:host .my-1 {\n  margin-top: 0.25rem;\n  margin-bottom: 0.25rem;\n}\n:host .py-1 {\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n:host .m-2 {\n  margin: 0.5rem;\n}\n:host .p-2 {\n  padding: 0.5rem;\n}\n:host .mt-2 {\n  margin-top: 0.5rem;\n}\n:host .pt-2 {\n  padding-top: 0.5rem;\n}\n:host .mr-2 {\n  margin-right: 0.5rem;\n}\n:host .pr-2 {\n  padding-right: 0.5rem;\n}\n:host .mb-2 {\n  margin-bottom: 0.5rem;\n}\n:host .pb-2 {\n  padding-bottom: 0.5rem;\n}\n:host .ml-2 {\n  margin-left: 0.5rem;\n}\n:host .pl-2 {\n  padding-left: 0.5rem;\n}\n:host .mx-2 {\n  margin-left: 0.5rem;\n  margin-right: 0.5rem;\n}\n:host .px-2 {\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n:host .my-2 {\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n:host .py-2 {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n:host .m-3 {\n  margin: 0.75rem;\n}\n:host .p-3 {\n  padding: 0.75rem;\n}\n:host .mt-3 {\n  margin-top: 0.75rem;\n}\n:host .pt-3 {\n  padding-top: 0.75rem;\n}\n:host .mr-3 {\n  margin-right: 0.75rem;\n}\n:host .pr-3 {\n  padding-right: 0.75rem;\n}\n:host .mb-3 {\n  margin-bottom: 0.75rem;\n}\n:host .pb-3 {\n  padding-bottom: 0.75rem;\n}\n:host .ml-3 {\n  margin-left: 0.75rem;\n}\n:host .pl-3 {\n  padding-left: 0.75rem;\n}\n:host .mx-3 {\n  margin-left: 0.75rem;\n  margin-right: 0.75rem;\n}\n:host .px-3 {\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n}\n:host .my-3 {\n  margin-top: 0.75rem;\n  margin-bottom: 0.75rem;\n}\n:host .py-3 {\n  padding-top: 0.75rem;\n  padding-bottom: 0.75rem;\n}\n:host .m-4 {\n  margin: 1rem;\n}\n:host .p-4 {\n  padding: 1rem;\n}\n:host .mt-4 {\n  margin-top: 1rem;\n}\n:host .pt-4 {\n  padding-top: 1rem;\n}\n:host .mr-4 {\n  margin-right: 1rem;\n}\n:host .pr-4 {\n  padding-right: 1rem;\n}\n:host .mb-4 {\n  margin-bottom: 1rem;\n}\n:host .pb-4 {\n  padding-bottom: 1rem;\n}\n:host .ml-4 {\n  margin-left: 1rem;\n}\n:host .pl-4 {\n  padding-left: 1rem;\n}\n:host .mx-4 {\n  margin-left: 1rem;\n  margin-right: 1rem;\n}\n:host .px-4 {\n  padding-left: 1rem;\n  padding-right: 1rem;\n}\n:host .my-4 {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n}\n:host .py-4 {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n}\n:host .m-5 {\n  margin: 1.25rem;\n}\n:host .p-5 {\n  padding: 1.25rem;\n}\n:host .mt-5 {\n  margin-top: 1.25rem;\n}\n:host .pt-5 {\n  padding-top: 1.25rem;\n}\n:host .mr-5 {\n  margin-right: 1.25rem;\n}\n:host .pr-5 {\n  padding-right: 1.25rem;\n}\n:host .mb-5 {\n  margin-bottom: 1.25rem;\n}\n:host .pb-5 {\n  padding-bottom: 1.25rem;\n}\n:host .ml-5 {\n  margin-left: 1.25rem;\n}\n:host .pl-5 {\n  padding-left: 1.25rem;\n}\n:host .mx-5 {\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n}\n:host .px-5 {\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n:host .my-5 {\n  margin-top: 1.25rem;\n  margin-bottom: 1.25rem;\n}\n:host .py-5 {\n  padding-top: 1.25rem;\n  padding-bottom: 1.25rem;\n}\n:host .m-6 {\n  margin: 1.5rem;\n}\n:host .p-6 {\n  padding: 1.5rem;\n}\n:host .mt-6 {\n  margin-top: 1.5rem;\n}\n:host .pt-6 {\n  padding-top: 1.5rem;\n}\n:host .mr-6 {\n  margin-right: 1.5rem;\n}\n:host .pr-6 {\n  padding-right: 1.5rem;\n}\n:host .mb-6 {\n  margin-bottom: 1.5rem;\n}\n:host .pb-6 {\n  padding-bottom: 1.5rem;\n}\n:host .ml-6 {\n  margin-left: 1.5rem;\n}\n:host .pl-6 {\n  padding-left: 1.5rem;\n}\n:host .mx-6 {\n  margin-left: 1.5rem;\n  margin-right: 1.5rem;\n}\n:host .px-6 {\n  padding-left: 1.5rem;\n  padding-right: 1.5rem;\n}\n:host .my-6 {\n  margin-top: 1.5rem;\n  margin-bottom: 1.5rem;\n}\n:host .py-6 {\n  padding-top: 1.5rem;\n  padding-bottom: 1.5rem;\n}\n:host .m-7 {\n  margin: 1.75rem;\n}\n:host .p-7 {\n  padding: 1.75rem;\n}\n:host .mt-7 {\n  margin-top: 1.75rem;\n}\n:host .pt-7 {\n  padding-top: 1.75rem;\n}\n:host .mr-7 {\n  margin-right: 1.75rem;\n}\n:host .pr-7 {\n  padding-right: 1.75rem;\n}\n:host .mb-7 {\n  margin-bottom: 1.75rem;\n}\n:host .pb-7 {\n  padding-bottom: 1.75rem;\n}\n:host .ml-7 {\n  margin-left: 1.75rem;\n}\n:host .pl-7 {\n  padding-left: 1.75rem;\n}\n:host .mx-7 {\n  margin-left: 1.75rem;\n  margin-right: 1.75rem;\n}\n:host .px-7 {\n  padding-left: 1.75rem;\n  padding-right: 1.75rem;\n}\n:host .my-7 {\n  margin-top: 1.75rem;\n  margin-bottom: 1.75rem;\n}\n:host .py-7 {\n  padding-top: 1.75rem;\n  padding-bottom: 1.75rem;\n}\n:host .m-8 {\n  margin: 2rem;\n}\n:host .p-8 {\n  padding: 2rem;\n}\n:host .mt-8 {\n  margin-top: 2rem;\n}\n:host .pt-8 {\n  padding-top: 2rem;\n}\n:host .mr-8 {\n  margin-right: 2rem;\n}\n:host .pr-8 {\n  padding-right: 2rem;\n}\n:host .mb-8 {\n  margin-bottom: 2rem;\n}\n:host .pb-8 {\n  padding-bottom: 2rem;\n}\n:host .ml-8 {\n  margin-left: 2rem;\n}\n:host .pl-8 {\n  padding-left: 2rem;\n}\n:host .mx-8 {\n  margin-left: 2rem;\n  margin-right: 2rem;\n}\n:host .px-8 {\n  padding-left: 2rem;\n  padding-right: 2rem;\n}\n:host .my-8 {\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n}\n:host .py-8 {\n  padding-top: 2rem;\n  padding-bottom: 2rem;\n}\n:host .mt-auto {\n  margin-top: auto;\n}\n:host .width-quarter {\n  width: 25%;\n}\n:host .height-quarter {\n  height: 25%;\n}\n:host .width-half {\n  width: 50%;\n}\n:host .height-half {\n  height: 50%;\n}\n:host .width-three-quarter {\n  width: 75%;\n}\n:host .height-three-quarter {\n  height: 75%;\n}\n:host .width-full {\n  width: 100%;\n}\n:host .height-full {\n  height: 100%;\n}\n:host .br-0 {\n  border-radius: 0 !important;\n}\n:host .br-1 {\n  border-radius: 4px !important;\n}\n:host .br-2 {\n  border-radius: 8px !important;\n}\n:host .br-3 {\n  border-radius: 12px !important;\n}\n:host .br-4 {\n  border-radius: 16px !important;\n}\n:host .br-5 {\n  border-radius: 20px !important;\n}\n:host .br-6 {\n  border-radius: 24px !important;\n}\n:host .br-7 {\n  border-radius: 28px !important;\n}\n:host .br-8 {\n  border-radius: 32px !important;\n}\n:host .br-9 {\n  border-radius: 36px !important;\n}\n:host .br-10 {\n  border-radius: 40px !important;\n}\n:host .opacity-0 {\n  opacity: 0;\n}\n:host .opacity-1 {\n  opacity: 0.1;\n}\n:host .opacity-2 {\n  opacity: 0.2;\n}\n:host .opacity-3 {\n  opacity: 0.3;\n}\n:host .opacity-4 {\n  opacity: 0.4;\n}\n:host .opacity-5 {\n  opacity: 0.5;\n}\n:host .opacity-6 {\n  opacity: 0.6;\n}\n:host .opacity-7 {\n  opacity: 0.7;\n}\n:host .opacity-8 {\n  opacity: 0.8;\n}\n:host .opacity-9 {\n  opacity: 0.9;\n}\n:host .opacity-10 {\n  opacity: 1;\n}\n:host .is-rounded {\n  border-radius: 9999px;\n}\n:host .image {\n  display: block;\n  position: relative;\n}\n:host .image img {\n  display: block;\n  height: auto;\n  width: 100%;\n}\n:host .image-border {\n  border: 1px solid #53565a;\n}\n:host .is-32x32 {\n  height: 32px !important;\n  width: 32px !important;\n}\n:host .is-40x40 {\n  height: 40px !important;\n  width: 40px !important;\n}\n:host .is-48x48 {\n  height: 48px !important;\n  width: 48px !important;\n}\n:host .is-64x64 {\n  height: 64px !important;\n  width: 64px !important;\n}\n:host .is-96x96 {\n  height: 96px !important;\n  width: 96px !important;\n}\n:host .is-128x128 {\n  height: 128px !important;\n  width: 128px !important;\n}\n:host .is-256x256 {\n  height: 256px !important;\n  width: 256px !important;\n}\n:host .column {\n  display: block;\n  flex-basis: 0;\n  flex-grow: 1;\n  flex-shrink: 1;\n}\n:host .column.is-narrow {\n  flex: none;\n}\n:host .has-banner-shadow {\n  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);\n}\n:host .has-text-weight-bold {\n  font-weight: bold;\n}\n:host .position-relative {\n  position: relative;\n}\n:host .position-fixed {\n  position: fixed;\n}\n:host .position-absolute {\n  position: absolute;\n}\n:host .is-flex {\n  display: flex;\n}\n:host .is-underlined {\n  text-decoration: underline;\n}\n:host .is-uppercase {\n  text-transform: uppercase;\n}\n:host .pointer {\n  cursor: pointer;\n}\n:host .forbidden {\n  cursor: not-allowed;\n}\n:host .icon {\n  align-items: center;\n  display: inline-flex;\n  justify-content: center;\n  height: 1.5rem;\n  width: 1.5rem;\n}\n:host .icon.is-small {\n  height: 1rem;\n  width: 1rem;\n}\n:host .icon.is-medium {\n  height: 2rem;\n  width: 2rem;\n}\n:host .icon.is-large {\n  height: 3rem;\n  width: 3rem;\n}\n:host .is-pulled-left {\n  float: left;\n}\n:host .is-pulled-right {\n  float: right;\n}\n:host .is-horizontal-aligned {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n:host .is-hidden {\n  display: none;\n}\n:host .additional-count {\n  background-color: #d9d9d9;\n  color: #53565a;\n  font-size: 14px;\n}\n:host .margin-auto {\n  margin: auto;\n}\n:host .background-black {\n  background-color: #2d2926;\n}\n:host .background-grey {\n  background-color: #d9d9d9;\n}\n:host .text-left {\n  text-align: left;\n}\n:host .text-right {\n  text-align: right;\n}\n:host .text-center {\n  text-align: center;\n}\n:host .align-center-screen {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: center;\n  align-items: center;\n}\n:host .gap-100 {\n  margin-left: 100px;\n}"],
         encapsulation: 3
       });
       return BannerComponent;
