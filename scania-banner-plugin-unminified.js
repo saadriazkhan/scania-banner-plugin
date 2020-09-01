@@ -93325,6 +93325,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             'warning': 'warning-warning',
             'danger': 'warning-danger'
           };
+          this.showBanner = false;
           this.modalOpened = false;
           this.displayCount = 0;
         }
@@ -93334,14 +93335,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           value: function ngOnChanges() {
             try {
               this.banner = JSON.parse(this.bannerconfiguration);
-              this.calculateAdditionalCount();
+              this.calculateAdditionalCountForImagesNavigation();
+              this.showBanner = !this.isBannerHidden();
+              if (this.banner && this.banner.startDateTime && this.banner.endDateTime) this.timeWatcher(); // not a good approach but okay for now
             } catch (e) {
               this.banner = undefined;
             }
           }
         }, {
-          key: "calculateAdditionalCount",
-          value: function calculateAdditionalCount() {
+          key: "timeWatcher",
+          value: function timeWatcher() {
+            var _this167 = this;
+
+            var currentDateTime = new Date();
+            if (this.getTimeFromString(this.banner.startDateTime) > currentDateTime.getTime()) setTimeout(function () {
+              _this167.showBanner = true;
+            }, this.getTimeFromString(this.banner.startDateTime) - currentDateTime.getTime());
+            if (this.getTimeFromString(this.banner.endDateTime) > currentDateTime.getTime()) setTimeout(function () {
+              _this167.showBanner = false;
+            }, this.getTimeFromString(this.banner.endDateTime) - currentDateTime.getTime());
+          }
+        }, {
+          key: "getTimeFromString",
+          value: function getTimeFromString(stringTime) {
+            return new Date(parseInt(stringTime)).getTime();
+          }
+        }, {
+          key: "calculateAdditionalCountForImagesNavigation",
+          value: function calculateAdditionalCountForImagesNavigation() {
             if (this.banner.imageUrls) this.displayCount = this.banner.imageUrls.length;
             if (this.banner.videoUrls) this.displayCount += this.banner.videoUrls.length;
             if (this.banner.maxImagesToShow) this.displayCount -= this.banner.maxImagesToShow;
@@ -93352,8 +93373,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           value: function isBannerHidden() {
             if (!this.banner.startDateTime && this.banner.endDateTime) return false;
             var currentTime = new Date();
-            if (currentTime.getTime() < new Date(parseInt(this.banner.startDateTime)).getTime()) return true;
-            if (currentTime.getTime() > new Date(parseInt(this.banner.endDateTime)).getTime()) return true;
+            if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime)) return true;
+            if (currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime)) return true;
             return false;
           }
         }, {
@@ -93425,7 +93446,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.banner && ctx.banner.isEnabled && !ctx.isBannerHidden());
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.banner && ctx.banner.isEnabled && ctx.showBanner);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
