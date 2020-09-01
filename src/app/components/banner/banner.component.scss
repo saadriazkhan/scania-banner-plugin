@@ -2,12 +2,7 @@
 	@return if($key == "0", 0, $value + rem);
 }
 
-@function sizeValueAuto($key, $value) {
-	@return if($key == "0", 0, $value);
-}
-
 :host {
-
 	$scania-black: #2d2926;
 	$scania-black-80: #53565a;
 	$scania-black-30: #d9d9d9;
@@ -66,19 +61,32 @@
 	$marginKey: "m";
 	$paddingKey: "p";
 	$separator: "-";
-	$sizes: (("0", 0), ("1", 0.25), ("2", 0.5), ("3", 0.75), ("4", 1), ("5", 1.25), ("6", 1.5), ("7", 1.75), ("8", 2));
+	$sizes: (
+		"0": 0,
+		"1": 0.25,
+		"2": 0.5,
+		"3": 0.75,
+		"4": 1,
+		"5": 1.25,
+		"6": 1.5,
+		"7": 1.75,
+		"8": 2,
+	);
 
-	$sizesAuto: (("auto", auto));
+	$positions: (
+		"t": "top",
+		"r": "right",
+		"b": "bottom",
+		"l": "left",
+	);
 
-	$positions: (("t", "top"), ("r", "right"), ("b", "bottom"), ("l", "left"));
-
-	$superPositions: (("x", "horizontal"), ("y", "vertical"));
+	$superPositions: (
+		"x": "horizontal",
+		"y": "vertical",
+	);
 
 	@mixin generateMarginsAndPaddings($marginKey, $paddingKey, $separator, $sizes, $positions, $superPositions) {
-		@each $size in $sizes {
-			$sizeKey: nth($size, 1);
-			$sizeValue: nth($size, 2);
-
+		@each $sizeKey, $sizeValue in $sizes {
 			.#{$marginKey}#{$separator}#{$sizeKey} {
 				margin: sizeValue($sizeKey, $sizeValue);
 			}
@@ -86,9 +94,7 @@
 				padding: sizeValue($sizeKey, $sizeValue);
 			}
 
-			@each $position in $positions {
-				$posKey: nth($position, 1);
-				$posValue: nth($position, 2);
+			@each $posKey, $posValue in $positions {
 				.#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
 					margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
 				}
@@ -97,9 +103,7 @@
 				}
 			}
 
-			@each $superPosition in $superPositions {
-				$posKey: nth($superPosition, 1);
-
+			@each $posKey, $posValue in $superPositions {
 				@if ($posKey == "x") {
 					.#{$marginKey}#{$posKey}#{$separator}#{$sizeKey} {
 						margin-left: sizeValue($sizeKey, $sizeValue);
@@ -339,7 +343,7 @@
 	.background-grey {
 		background-color: $scania-black-30;
 	}
-	
+
 	.background-white {
 		background-color: $scania-white;
 	}

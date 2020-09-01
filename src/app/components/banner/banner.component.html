@@ -1,4 +1,4 @@
-<div *ngIf="banner && banner.isEnabled && !isBannerHidden()" class="has-banner-shadow px-4 py-2"
+<div *ngIf="banner && banner.isEnabled && showBanner" class="has-banner-shadow px-4 py-2"
 	[ngClass]="'has-banner-background-' + banner.type">
 	<div class="columns is-flex">
 		<div class="column is-flex">

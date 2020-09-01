@@ -21,6 +21,7 @@ export class BannerComponent implements OnChanges {
 		'warning': 'warning-warning',
 		'danger': 'warning-danger'
 	};
+	public showBanner: boolean = false;
 	public modalOpened: boolean = false;
 	public itemSource: string;
 	public displayCount: number = 0;
@@ -30,14 +31,40 @@ export class BannerComponent implements OnChanges {
 	public ngOnChanges(): void {
 		try {
 			this.banner = JSON.parse(this.bannerconfiguration);
-			this.calculateAdditionalCount();
+			this.calculateAdditionalCountForImagesNavigation();
+			this.showBanner = !this.isBannerHidden();
+
+			if (this.banner && this.banner.startDateTime && this.banner.endDateTime)
+				this.timeWatcher(); // not a good approach but okay for now
+
 		}
 		catch (e) {
 			this.banner = undefined;
 		}
 	}
 
-	private calculateAdditionalCount(): void {
+	private timeWatcher(): void {
+		let currentDateTime = new Date();
+
+		if (this.getTimeFromString(this.banner.startDateTime) > currentDateTime.getTime())
+			setTimeout(() => {
+				this.showBanner = true;
+
+			}, this.getTimeFromString(this.banner.startDateTime) - currentDateTime.getTime());
+
+		if (this.getTimeFromString(this.banner.endDateTime) > currentDateTime.getTime())
+			setTimeout(() => {
+				this.showBanner = false;
+
+			}, this.getTimeFromString(this.banner.endDateTime) - currentDateTime.getTime());
+
+	}
+
+	private getTimeFromString(stringTime: string): number {
+		return new Date(parseInt(stringTime)).getTime();
+	}
+
+	private calculateAdditionalCountForImagesNavigation(): void {
 		if (this.banner.imageUrls)
 			this.displayCount = this.banner.imageUrls.length;
 		if (this.banner.videoUrls)
@@ -54,10 +81,10 @@ export class BannerComponent implements OnChanges {
 
 		let currentTime: Date = new Date();
 
-		if (currentTime.getTime() < new Date(parseInt(this.banner.startDateTime)).getTime())
+		if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime))
 			return true;
 
-		if (currentTime.getTime() > new Date(parseInt(this.banner.endDateTime)).getTime())
+		if (currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime))
 			return true;
 
 		return false;
