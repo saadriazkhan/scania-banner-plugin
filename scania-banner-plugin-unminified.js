@@ -93341,6 +93341,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               this.banner = JSON.parse(this.bannerconfiguration);
               this.calculateAdditionalCountForImagesNavigation();
               this.showBanner = !this.isBannerHidden();
+              clearTimeout(this.startTimeOut);
+              clearTimeout(this.endTimeOut);
               if (this.banner && this.banner.startDateTime && this.banner.endDateTime) this.timeWatcher(); // not a good approach but okay for now
             } catch (e) {
               this.banner = undefined;
@@ -93352,11 +93354,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var _this167 = this;
 
             var currentDateTime = new Date();
-            if (this.getTimeFromString(this.banner.startDateTime) > currentDateTime.getTime()) setTimeout(function () {
-              _this167.showBanner = true;
+            if (this.getTimeFromString(this.banner.startDateTime) > currentDateTime.getTime()) this.startTimeOut = setTimeout(function () {
+              return _this167.showBanner = true;
             }, this.getTimeFromString(this.banner.startDateTime) - currentDateTime.getTime());
-            if (this.getTimeFromString(this.banner.endDateTime) > currentDateTime.getTime()) setTimeout(function () {
-              _this167.showBanner = false;
+            if (this.getTimeFromString(this.banner.endDateTime) > currentDateTime.getTime()) this.endTimeOut = setTimeout(function () {
+              return _this167.showBanner = false;
             }, this.getTimeFromString(this.banner.endDateTime) - currentDateTime.getTime());
           }
         }, {

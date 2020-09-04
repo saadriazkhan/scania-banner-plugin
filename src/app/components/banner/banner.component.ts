@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, ViewEncapsulation } from '@angular/core';
 import { IBanner } from '../../../interfaces/i-banner.interface';
 
 @Component({
@@ -26,13 +26,20 @@ export class BannerComponent implements OnChanges {
 	public itemSource: string;
 	public displayCount: number = 0;
 
+	public startTimeOut: number;
+	public endTimeOut: number;
+
 	public constructor() { }
 
 	public ngOnChanges(): void {
 		try {
 			this.banner = JSON.parse(this.bannerconfiguration);
 			this.calculateAdditionalCountForImagesNavigation();
+
 			this.showBanner = !this.isBannerHidden();
+
+			clearTimeout(this.startTimeOut);
+			clearTimeout(this.endTimeOut);
 
 			if (this.banner && this.banner.startDateTime && this.banner.endDateTime)
 				this.timeWatcher(); // not a good approach but okay for now
@@ -47,17 +54,16 @@ export class BannerComponent implements OnChanges {
 		let currentDateTime = new Date();
 
 		if (this.getTimeFromString(this.banner.startDateTime) > currentDateTime.getTime())
-			setTimeout(() => {
-				this.showBanner = true;
-
-			}, this.getTimeFromString(this.banner.startDateTime) - currentDateTime.getTime());
+			this.startTimeOut = setTimeout(
+				() => this.showBanner = true,
+				this.getTimeFromString(this.banner.startDateTime) - currentDateTime.getTime()
+			);
 
 		if (this.getTimeFromString(this.banner.endDateTime) > currentDateTime.getTime())
-			setTimeout(() => {
-				this.showBanner = false;
-
-			}, this.getTimeFromString(this.banner.endDateTime) - currentDateTime.getTime());
-
+			this.endTimeOut = setTimeout(
+				() => this.showBanner = false,
+				this.getTimeFromString(this.banner.endDateTime) - currentDateTime.getTime()
+			);
 	}
 
 	private getTimeFromString(stringTime: string): number {
@@ -67,10 +73,13 @@ export class BannerComponent implements OnChanges {
 	private calculateAdditionalCountForImagesNavigation(): void {
 		if (this.banner.imageUrls)
 			this.displayCount = this.banner.imageUrls.length;
+
 		if (this.banner.videoUrls)
 			this.displayCount += this.banner.videoUrls.length;
+
 		if (this.banner.maxImagesToShow)
 			this.displayCount -= this.banner.maxImagesToShow;
+
 		if (this.banner.maxVideosToShow)
 			this.displayCount -= this.banner.maxVideosToShow;
 	}

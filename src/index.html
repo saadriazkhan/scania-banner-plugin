@@ -12,9 +12,11 @@
 <body>
 	<app-root></app-root>
 	<scania-banner id="scania-banner"></scania-banner>
+	<button onclick="hello()">hello</button>
 </body>
 
 <script>
+
 	let webElementConfiguration = {
 		type: 'information',
 		isEnabled: 'true',
@@ -41,7 +43,14 @@
 		endDateTime: '1598990760000', // optional epoch datetime stamp
 	};
 
+	function hello() {
+		webElementConfiguration.startDateTime = (+(webElementConfiguration.startDateTime) + 1000000).toString();
+		webElementConfiguration.endDateTime = (+(webElementConfiguration.startDateTime) + 1000000).toString();
+		console.log(webElementConfiguration);
+		document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
+	}
 	document.getElementById('scania-banner').setAttribute('bannerconfiguration', JSON.stringify(webElementConfiguration));
+
 </script>
 
 </html>
