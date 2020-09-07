@@ -36,13 +36,14 @@ export class BannerComponent implements OnChanges {
 			this.banner = JSON.parse(this.bannerconfiguration);
 			this.calculateAdditionalCountForImagesNavigation();
 
-			this.showBanner = !this.isBannerHidden();
+			if (this.banner && this.banner.startDateTime && this.banner.endDateTime) {
+				this.showBanner = !this.isBannerHidden();
 
-			clearTimeout(this.startTimeOut);
-			clearTimeout(this.endTimeOut);
+				clearTimeout(this.startTimeOut);
+				clearTimeout(this.endTimeOut);
 
-			if (this.banner && this.banner.startDateTime && this.banner.endDateTime)
 				this.timeWatcher(); // not a good approach but okay for now
+			}
 
 		}
 		catch (e) {
@@ -84,16 +85,10 @@ export class BannerComponent implements OnChanges {
 			this.displayCount -= this.banner.maxVideosToShow;
 	}
 
-	public isBannerHidden(): boolean {
-		if (!this.banner.startDateTime && this.banner.endDateTime)
-			return false;
+	private isBannerHidden(): boolean {
+		const currentTime: Date = new Date();
 
-		let currentTime: Date = new Date();
-
-		if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime))
-			return true;
-
-		if (currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime))
+		if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime) || currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime))
 			return true;
 
 		return false;

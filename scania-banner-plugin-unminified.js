@@ -93340,10 +93340,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             try {
               this.banner = JSON.parse(this.bannerconfiguration);
               this.calculateAdditionalCountForImagesNavigation();
-              this.showBanner = !this.isBannerHidden();
-              clearTimeout(this.startTimeOut);
-              clearTimeout(this.endTimeOut);
-              if (this.banner && this.banner.startDateTime && this.banner.endDateTime) this.timeWatcher(); // not a good approach but okay for now
+
+              if (this.banner && this.banner.startDateTime && this.banner.endDateTime) {
+                this.showBanner = !this.isBannerHidden();
+                clearTimeout(this.startTimeOut);
+                clearTimeout(this.endTimeOut);
+                this.timeWatcher(); // not a good approach but okay for now
+              }
             } catch (e) {
               this.banner = undefined;
             }
@@ -93377,10 +93380,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           key: "isBannerHidden",
           value: function isBannerHidden() {
-            if (!this.banner.startDateTime && this.banner.endDateTime) return false;
             var currentTime = new Date();
-            if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime)) return true;
-            if (currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime)) return true;
+            if (currentTime.getTime() < this.getTimeFromString(this.banner.startDateTime) || currentTime.getTime() > this.getTimeFromString(this.banner.endDateTime)) return true;
             return false;
           }
         }, {
